@@ -15,7 +15,7 @@ set :config_example_suffix, '.example'
 set :config_files, %w{config/database.yml config/secrets.yml}
 set :puma_conf, "#{shared_path}/config/puma.rb"
 append :rbenv_map_bins, 'puma', 'pumactl'
-set :rvm_ruby_version, 'ruby 2.5.0p0'
+set :rvm_ruby_version, '2.5.0'
 
 
 
