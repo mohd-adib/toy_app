@@ -16,8 +16,16 @@ set :config_files, %w{config/database.yml config/secrets.yml}
 set :puma_conf, "#{shared_path}/config/puma.rb"
 set :rvm_map_bins, %w{gem rake ruby rails bundle puma pumactl}
 set :rvm_ruby_version, '2.5.0'
+set :format_options, log_file: "storage/logs/capistrano.log"
 
-
+namespace :logs do
+  desc "tail rails logs" 
+  task :tail_rails do
+    on roles(:app) do
+      execute "tail -f #{shared_path}/log/#{fetch(:rails_env)}.log"
+    end
+  end
+end
 
 namespace :deploy do
   before 'check:linked_files', 'config:push'
