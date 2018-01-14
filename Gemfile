@@ -51,7 +51,7 @@ group :development do
   gem 'capistrano'
   gem 'capistrano-rvm'
   gem 'capistrano-nginx'
-  gem 'capistrano3-puma'
+  gem 'capistrano3-puma', github: "seuros/capistrano-puma"
   gem 'capistrano-rails'
   gem 'capistrano-rails-db'
   gem 'capistrano-rails-console'
