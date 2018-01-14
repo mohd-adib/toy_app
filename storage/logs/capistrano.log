@@ -1564,3 +1564,390 @@
   INFO [57b21392] Running /usr/bin/env sudo service nginx restart as root@35.198.205.200
  DEBUG [57b21392] Command: /usr/bin/env sudo service nginx restart
   INFO [57b21392] Finished in 0.418 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-01-14 21:51:13 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e2c0c354] Running [ -d ~/.rvm ] as root@35.198.205.200
+ DEBUG [e2c0c354] Command: [ -d ~/.rvm ]
+ DEBUG [e2c0c354] Finished in 1.020 seconds with exit status 1 (failed).
+ DEBUG [4a3d6f7e] Running [ -d /usr/local/rvm ] as root@35.198.205.200
+ DEBUG [4a3d6f7e] Command: [ -d /usr/local/rvm ]
+ DEBUG [4a3d6f7e] Finished in 0.252 seconds with exit status 0 (successful).
+ DEBUG [8824d922] Running /usr/local/rvm/bin/rvm version as root@35.198.205.200
+ DEBUG [8824d922] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [8824d922] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [8824d922] 	
+ DEBUG [8824d922] Finished in 0.483 seconds with exit status 0 (successful).
+ DEBUG [02436cfb] Running /usr/local/rvm/bin/rvm current as root@35.198.205.200
+ DEBUG [02436cfb] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [02436cfb] 	ruby-2.5.0
+ DEBUG [02436cfb] 	
+ DEBUG [02436cfb] Finished in 0.409 seconds with exit status 0 (successful).
+ DEBUG [913aec0f] Running /usr/local/rvm/bin/rvm 2.5.0 do ruby --version as root@35.198.205.200
+ DEBUG [913aec0f] Command: /usr/local/rvm/bin/rvm 2.5.0 do ruby --version
+ DEBUG [913aec0f] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+ DEBUG [913aec0f] 	
+ DEBUG [913aec0f] Finished in 0.531 seconds with exit status 0 (successful).
+  INFO [47e96e4d] Running /usr/bin/env mkdir -p /tmp as root@35.198.205.200
+ DEBUG [47e96e4d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [47e96e4d] Finished in 0.266 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-toy_app-production-mat.sh 0.0%
+  INFO Uploading /tmp/git-ssh-toy_app-production-mat.sh 100.0%
+  INFO [a2480839] Running /usr/bin/env chmod 700 /tmp/git-ssh-toy_app-production-mat.sh as root@35.198.205.200
+ DEBUG [a2480839] Command: /usr/bin/env chmod 700 /tmp/git-ssh-toy_app-production-mat.sh
+  INFO [a2480839] Finished in 0.278 seconds with exit status 0 (successful).
+  INFO [8ba12a6c] Running /usr/bin/env git ls-remote git@github.com:mohd-adib/toy_app.git HEAD as root@35.198.205.200
+ DEBUG [8ba12a6c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env git ls-remote git@github.com:mohd-adib/toy_app.git HEAD )
+ DEBUG [8ba12a6c] 	6760c40bb0884bb7e72db3b40254f445a56325f7
+ DEBUG [8ba12a6c] 		
+ DEBUG [8ba12a6c] 	HEAD
+  INFO [8ba12a6c] Finished in 2.429 seconds with exit status 0 (successful).
+  INFO [387bda98] Running /usr/bin/env mkdir -p /home/deployer/apps/toy_app/shared /home/deployer/apps/toy_app/releases as root@35.198.205.200
+ DEBUG [387bda98] Command: /usr/bin/env mkdir -p /home/deployer/apps/toy_app/shared /home/deployer/apps/toy_app/releases
+  INFO [387bda98] Finished in 0.278 seconds with exit status 0 (successful).
+  INFO [579b8292] Running /usr/bin/env mkdir -p /home/deployer/apps/toy_app/shared/log /home/deployer/apps/toy_app/shared/tmp/pids /home/deployer/apps/toy_app/shared/tmp/cache /home/deployer/apps/toy_app/shared/tmp/sockets /home/deployer/apps/toy_app/shared/vendor/bundle /home/deployer/apps/toy_app/shared/public/system /home/deployer/apps/toy_app/shared/public/uploads /home/deployer/apps/toy_app/shared/public/assets as root@35.198.205.200
+ DEBUG [579b8292] Command: /usr/bin/env mkdir -p /home/deployer/apps/toy_app/shared/log /home/deployer/apps/toy_app/shared/tmp/pids /home/deployer/apps/toy_app/shared/tmp/cache /home/deployer/apps/toy_app/shared/tmp/sockets /home/deployer/apps/toy_app/shared/vendor/bundle /home/deployer/apps/toy_app/shared/public/system /home/deployer/apps/toy_app/shared/public/uploads /home/deployer/apps/toy_app/shared/public/assets
+  INFO [579b8292] Finished in 0.318 seconds with exit status 0 (successful).
+  INFO [67345bd3] Running /usr/bin/env mkdir -p /home/deployer/apps/toy_app/shared/config as root@35.198.205.200
+ DEBUG [67345bd3] Command: /usr/bin/env mkdir -p /home/deployer/apps/toy_app/shared/config
+  INFO [67345bd3] Finished in 0.267 seconds with exit status 0 (successful).
+ DEBUG [fb23fd87] Running if test ! -d /home/deployer/apps/toy_app/shared; then echo "Directory does not exist '/home/deployer/apps/toy_app/shared'" 1>&2; false; fi as root@35.198.205.200
+ DEBUG [fb23fd87] Command: if test ! -d /home/deployer/apps/toy_app/shared; then echo "Directory does not exist '/home/deployer/apps/toy_app/shared'" 1>&2; false; fi
+ DEBUG [fb23fd87] Finished in 0.258 seconds with exit status 0 (successful).
+  INFO Uploading config ./config/database.production.yml as config/database.yml
+ DEBUG Uploading /home/deployer/apps/toy_app/shared/config/database.yml 0.0%
+  INFO Uploading /home/deployer/apps/toy_app/shared/config/database.yml 100.0%
+  INFO Uploading config ./config/secrets.production.yml as config/secrets.yml
+ DEBUG Uploading /home/deployer/apps/toy_app/shared/config/secrets.yml 0.0%
+  INFO Uploading /home/deployer/apps/toy_app/shared/config/secrets.yml 100.0%
+ DEBUG Uploading /home/deployer/apps/toy_app/shared/config/puma.rb 0.0%
+  INFO Uploading /home/deployer/apps/toy_app/shared/config/puma.rb 100.0%
+ DEBUG Uploading /tmp/nginx_toy_app_production 0.0%
+  INFO Uploading /tmp/nginx_toy_app_production 100.0%
+  INFO [323a5db4] Running /usr/bin/env sudo mv /tmp/nginx_toy_app_production /etc/nginx/sites-available/toy_app_production as root@35.198.205.200
+ DEBUG [323a5db4] Command: /usr/bin/env sudo mv /tmp/nginx_toy_app_production /etc/nginx/sites-available/toy_app_production
+  INFO [323a5db4] Finished in 0.248 seconds with exit status 0 (successful).
+  INFO [13ce8aac] Running /usr/bin/env sudo ln -fs /etc/nginx/sites-available/toy_app_production /etc/nginx/sites-enabled/toy_app_production as root@35.198.205.200
+ DEBUG [13ce8aac] Command: /usr/bin/env sudo ln -fs /etc/nginx/sites-available/toy_app_production /etc/nginx/sites-enabled/toy_app_production
+  INFO [13ce8aac] Finished in 0.240 seconds with exit status 0 (successful).
+ DEBUG [561a9227] Running [ -f /home/deployer/apps/toy_app/shared/config/database.yml ] as root@35.198.205.200
+ DEBUG [561a9227] Command: [ -f /home/deployer/apps/toy_app/shared/config/database.yml ]
+ DEBUG [561a9227] Finished in 0.258 seconds with exit status 0 (successful).
+ DEBUG [08ea710f] Running [ -f /home/deployer/apps/toy_app/shared/config/secrets.yml ] as root@35.198.205.200
+ DEBUG [08ea710f] Command: [ -f /home/deployer/apps/toy_app/shared/config/secrets.yml ]
+ DEBUG [08ea710f] Finished in 0.260 seconds with exit status 0 (successful).
+ DEBUG [0a25adb6] Running [ -f /home/deployer/apps/toy_app/shared/config/puma.rb ] as root@35.198.205.200
+ DEBUG [0a25adb6] Command: [ -f /home/deployer/apps/toy_app/shared/config/puma.rb ]
+ DEBUG [0a25adb6] Finished in 0.230 seconds with exit status 0 (successful).
+ DEBUG [07fc7cd1] Running [ -f /home/deployer/apps/toy_app/shared/config/puma.rb ] as root@35.198.205.200
+ DEBUG [07fc7cd1] Command: [ -f /home/deployer/apps/toy_app/shared/config/puma.rb ]
+ DEBUG [07fc7cd1] Finished in 0.249 seconds with exit status 0 (successful).
+ DEBUG [619f6337] Running [ -f /home/deployer/apps/toy_app/current/REVISION ] as root@35.198.205.200
+ DEBUG [619f6337] Command: [ -f /home/deployer/apps/toy_app/current/REVISION ]
+ DEBUG [619f6337] Finished in 0.257 seconds with exit status 0 (successful).
+ DEBUG [3d4b3e70] Running /usr/bin/env cat /home/deployer/apps/toy_app/current/REVISION 2>/dev/null as root@35.198.205.200
+ DEBUG [3d4b3e70] Command: /usr/bin/env cat /home/deployer/apps/toy_app/current/REVISION 2>/dev/null
+ DEBUG [3d4b3e70] 	2aa751830d3c3f6cc43086642ae41162a14ab18a
+ DEBUG [3d4b3e70] 	
+ DEBUG [3d4b3e70] Finished in 0.250 seconds with exit status 0 (successful).
+ DEBUG [90db17f4] Running [ -f /home/deployer/apps/toy_app/repo/HEAD ] as root@35.198.205.200
+ DEBUG [90db17f4] Command: [ -f /home/deployer/apps/toy_app/repo/HEAD ]
+ DEBUG [90db17f4] Finished in 0.229 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deployer/apps/toy_app/repo
+ DEBUG [9d4a27e9] Running if test ! -d /home/deployer/apps/toy_app/repo; then echo "Directory does not exist '/home/deployer/apps/toy_app/repo'" 1>&2; false; fi as root@35.198.205.200
+ DEBUG [9d4a27e9] Command: if test ! -d /home/deployer/apps/toy_app/repo; then echo "Directory does not exist '/home/deployer/apps/toy_app/repo'" 1>&2; false; fi
+ DEBUG [9d4a27e9] Finished in 0.238 seconds with exit status 0 (successful).
+  INFO [ca6e8009] Running /usr/bin/env git remote set-url origin git@github.com:mohd-adib/toy_app.git as root@35.198.205.200
+ DEBUG [ca6e8009] Command: cd /home/deployer/apps/toy_app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env git remote set-url origin git@github.com:mohd-adib/toy_app.git )
+  INFO [ca6e8009] Finished in 0.248 seconds with exit status 0 (successful).
+  INFO [7801e023] Running /usr/bin/env git remote update --prune as root@35.198.205.200
+ DEBUG [7801e023] Command: cd /home/deployer/apps/toy_app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [7801e023] 	Fetching origin
+ DEBUG [7801e023] 	
+ DEBUG [7801e023] 	remote: Counting objects: 8, done.[K
+ DEBUG [7801e023] 	
+ DEBUG [7801e023] 	remote: Compressing objects:  50% (1/2)   [K
+ DEBUG [7801e023] 	remote: Compressing objects: 100% (2/2)   [K
+ DEBUG [7801e023] 	remote: Compressing objects: 100% (2/2), done.[K
+ DEBUG [7801e023] 	
+ DEBUG [7801e023] 	remote: Total 8 (delta 4), reused 8 (delta 4), pack-reused 0[K
+ DEBUG [7801e023] 	
+ DEBUG [7801e023] 	Unpacking objects:  12% (1/8)   
+ DEBUG [7801e023] 	Unpacking objects:  25% (2/8)   
+ DEBUG [7801e023] 	Unpacking objects:  37% (3/8)   
+ DEBUG [7801e023] 	Unpacking objects:  50% (4/8)   
+ DEBUG [7801e023] 	Unpacking objects:  62% (5/8)   
+ DEBUG [7801e023] 	Unpacking objects:  75% (6/8)   
+ DEBUG [7801e023] 	Unpacking objects:  87% (7/8)   
+ DEBUG [7801e023] 	Unpacking objects: 100% (8/8)   
+ DEBUG [7801e023] 	Unpacking objects: 100% (8/8), done.
+ DEBUG [7801e023] 	
+ DEBUG [7801e023] 	From github.com:mohd-adib/toy_app
+ DEBUG [7801e023] 	
+ DEBUG [7801e023] 	   2aa7518..6760c40  master     -> master
+ DEBUG [7801e023] 	
+  INFO [7801e023] Finished in 2.690 seconds with exit status 0 (successful).
+ DEBUG [7d95fad7] Running if test ! -d /home/deployer/apps/toy_app/repo; then echo "Directory does not exist '/home/deployer/apps/toy_app/repo'" 1>&2; false; fi as root@35.198.205.200
+ DEBUG [7d95fad7] Command: if test ! -d /home/deployer/apps/toy_app/repo; then echo "Directory does not exist '/home/deployer/apps/toy_app/repo'" 1>&2; false; fi
+ DEBUG [7d95fad7] Finished in 0.219 seconds with exit status 0 (successful).
+  INFO [b098d926] Running /usr/bin/env mkdir -p /home/deployer/apps/toy_app/releases/20180114135124 as root@35.198.205.200
+ DEBUG [b098d926] Command: cd /home/deployer/apps/toy_app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env mkdir -p /home/deployer/apps/toy_app/releases/20180114135124 )
+  INFO [b098d926] Finished in 0.268 seconds with exit status 0 (successful).
+  INFO [3c5698eb] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deployer/apps/toy_app/releases/20180114135124 as root@35.198.205.200
+ DEBUG [3c5698eb] Command: cd /home/deployer/apps/toy_app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deployer/apps/toy_app/releases/20180114135124 )
+  INFO [3c5698eb] Finished in 0.278 seconds with exit status 0 (successful).
+  INFO [f3f3302d] Running /usr/bin/env sudo /usr/bin/monit unmonitor puma_toy_app_production as root@35.198.205.200
+ DEBUG [f3f3302d] Command: /usr/bin/env sudo /usr/bin/monit unmonitor puma_toy_app_production
+ DEBUG [f3f3302d] 	/etc/monit/monitrc:290: Include failed -- Success '/etc/monit/conf-enabled/*'
+ DEBUG [f3f3302d] 	
+  INFO [f3f3302d] Finished in 0.279 seconds with exit status 0 (successful).
+ DEBUG [ee493bbd] Running if test ! -d /home/deployer/apps/toy_app/repo; then echo "Directory does not exist '/home/deployer/apps/toy_app/repo'" 1>&2; false; fi as root@35.198.205.200
+ DEBUG [ee493bbd] Command: if test ! -d /home/deployer/apps/toy_app/repo; then echo "Directory does not exist '/home/deployer/apps/toy_app/repo'" 1>&2; false; fi
+ DEBUG [ee493bbd] Finished in 0.267 seconds with exit status 0 (successful).
+ DEBUG [5050f4b5] Running /usr/bin/env git rev-list --max-count=1 master as root@35.198.205.200
+ DEBUG [5050f4b5] Command: cd /home/deployer/apps/toy_app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [5050f4b5] 	6760c40bb0884bb7e72db3b40254f445a56325f7
+ DEBUG [5050f4b5] 	
+ DEBUG [5050f4b5] Finished in 0.309 seconds with exit status 0 (successful).
+ DEBUG [cc3034a1] Running if test ! -d /home/deployer/apps/toy_app/releases/20180114135124; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180114135124'" 1>&2; false; fi as root@35.198.205.200
+ DEBUG [cc3034a1] Command: if test ! -d /home/deployer/apps/toy_app/releases/20180114135124; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180114135124'" 1>&2; false; fi
+ DEBUG [cc3034a1] Finished in 0.260 seconds with exit status 0 (successful).
+  INFO [8036585a] Running /usr/bin/env echo "6760c40bb0884bb7e72db3b40254f445a56325f7" >> REVISION as root@35.198.205.200
+ DEBUG [8036585a] Command: cd /home/deployer/apps/toy_app/releases/20180114135124 && /usr/bin/env echo "6760c40bb0884bb7e72db3b40254f445a56325f7" >> REVISION
+  INFO [8036585a] Finished in 0.248 seconds with exit status 0 (successful).
+  INFO [da60d5e9] Running /usr/bin/env mkdir -p /home/deployer/apps/toy_app/releases/20180114135124/config as root@35.198.205.200
+ DEBUG [da60d5e9] Command: /usr/bin/env mkdir -p /home/deployer/apps/toy_app/releases/20180114135124/config
+  INFO [da60d5e9] Finished in 0.247 seconds with exit status 0 (successful).
+ DEBUG [c6a4d7fc] Running [ -L /home/deployer/apps/toy_app/releases/20180114135124/config/database.yml ] as root@35.198.205.200
+ DEBUG [c6a4d7fc] Command: [ -L /home/deployer/apps/toy_app/releases/20180114135124/config/database.yml ]
+ DEBUG [c6a4d7fc] Finished in 0.269 seconds with exit status 1 (failed).
+ DEBUG [2e7977a6] Running [ -f /home/deployer/apps/toy_app/releases/20180114135124/config/database.yml ] as root@35.198.205.200
+ DEBUG [2e7977a6] Command: [ -f /home/deployer/apps/toy_app/releases/20180114135124/config/database.yml ]
+ DEBUG [2e7977a6] Finished in 0.260 seconds with exit status 0 (successful).
+  INFO [b25ab1b9] Running /usr/bin/env rm /home/deployer/apps/toy_app/releases/20180114135124/config/database.yml as root@35.198.205.200
+ DEBUG [b25ab1b9] Command: /usr/bin/env rm /home/deployer/apps/toy_app/releases/20180114135124/config/database.yml
+  INFO [b25ab1b9] Finished in 0.249 seconds with exit status 0 (successful).
+  INFO [802312e6] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/config/database.yml /home/deployer/apps/toy_app/releases/20180114135124/config/database.yml as root@35.198.205.200
+ DEBUG [802312e6] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/config/database.yml /home/deployer/apps/toy_app/releases/20180114135124/config/database.yml
+  INFO [802312e6] Finished in 0.257 seconds with exit status 0 (successful).
+ DEBUG [eea4583c] Running [ -L /home/deployer/apps/toy_app/releases/20180114135124/config/secrets.yml ] as root@35.198.205.200
+ DEBUG [eea4583c] Command: [ -L /home/deployer/apps/toy_app/releases/20180114135124/config/secrets.yml ]
+ DEBUG [eea4583c] Finished in 0.239 seconds with exit status 1 (failed).
+ DEBUG [67a1cf44] Running [ -f /home/deployer/apps/toy_app/releases/20180114135124/config/secrets.yml ] as root@35.198.205.200
+ DEBUG [67a1cf44] Command: [ -f /home/deployer/apps/toy_app/releases/20180114135124/config/secrets.yml ]
+ DEBUG [67a1cf44] Finished in 0.250 seconds with exit status 0 (successful).
+  INFO [4d90feaf] Running /usr/bin/env rm /home/deployer/apps/toy_app/releases/20180114135124/config/secrets.yml as root@35.198.205.200
+ DEBUG [4d90feaf] Command: /usr/bin/env rm /home/deployer/apps/toy_app/releases/20180114135124/config/secrets.yml
+  INFO [4d90feaf] Finished in 0.249 seconds with exit status 0 (successful).
+  INFO [16c13427] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/config/secrets.yml /home/deployer/apps/toy_app/releases/20180114135124/config/secrets.yml as root@35.198.205.200
+ DEBUG [16c13427] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/config/secrets.yml /home/deployer/apps/toy_app/releases/20180114135124/config/secrets.yml
+  INFO [16c13427] Finished in 0.277 seconds with exit status 0 (successful).
+ DEBUG [7d26b996] Running [ -L /home/deployer/apps/toy_app/releases/20180114135124/config/puma.rb ] as root@35.198.205.200
+ DEBUG [7d26b996] Command: [ -L /home/deployer/apps/toy_app/releases/20180114135124/config/puma.rb ]
+ DEBUG [7d26b996] Finished in 0.240 seconds with exit status 1 (failed).
+ DEBUG [d4e717e7] Running [ -f /home/deployer/apps/toy_app/releases/20180114135124/config/puma.rb ] as root@35.198.205.200
+ DEBUG [d4e717e7] Command: [ -f /home/deployer/apps/toy_app/releases/20180114135124/config/puma.rb ]
+ DEBUG [d4e717e7] Finished in 0.258 seconds with exit status 0 (successful).
+  INFO [95d459fe] Running /usr/bin/env rm /home/deployer/apps/toy_app/releases/20180114135124/config/puma.rb as root@35.198.205.200
+ DEBUG [95d459fe] Command: /usr/bin/env rm /home/deployer/apps/toy_app/releases/20180114135124/config/puma.rb
+  INFO [95d459fe] Finished in 0.260 seconds with exit status 0 (successful).
+  INFO [a555eed9] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/config/puma.rb /home/deployer/apps/toy_app/releases/20180114135124/config/puma.rb as root@35.198.205.200
+ DEBUG [a555eed9] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/config/puma.rb /home/deployer/apps/toy_app/releases/20180114135124/config/puma.rb
+  INFO [a555eed9] Finished in 0.239 seconds with exit status 0 (successful).
+  INFO [59c21611] Running /usr/bin/env mkdir -p /home/deployer/apps/toy_app/releases/20180114135124 /home/deployer/apps/toy_app/releases/20180114135124/tmp /home/deployer/apps/toy_app/releases/20180114135124/vendor /home/deployer/apps/toy_app/releases/20180114135124/public as root@35.198.205.200
+ DEBUG [59c21611] Command: /usr/bin/env mkdir -p /home/deployer/apps/toy_app/releases/20180114135124 /home/deployer/apps/toy_app/releases/20180114135124/tmp /home/deployer/apps/toy_app/releases/20180114135124/vendor /home/deployer/apps/toy_app/releases/20180114135124/public
+  INFO [59c21611] Finished in 0.254 seconds with exit status 0 (successful).
+ DEBUG [390198a6] Running [ -L /home/deployer/apps/toy_app/releases/20180114135124/log ] as root@35.198.205.200
+ DEBUG [390198a6] Command: [ -L /home/deployer/apps/toy_app/releases/20180114135124/log ]
+ DEBUG [390198a6] Finished in 0.249 seconds with exit status 1 (failed).
+ DEBUG [8115bab7] Running [ -d /home/deployer/apps/toy_app/releases/20180114135124/log ] as root@35.198.205.200
+ DEBUG [8115bab7] Command: [ -d /home/deployer/apps/toy_app/releases/20180114135124/log ]
+ DEBUG [8115bab7] Finished in 0.239 seconds with exit status 0 (successful).
+  INFO [92ed34c7] Running /usr/bin/env rm -rf /home/deployer/apps/toy_app/releases/20180114135124/log as root@35.198.205.200
+ DEBUG [92ed34c7] Command: /usr/bin/env rm -rf /home/deployer/apps/toy_app/releases/20180114135124/log
+  INFO [92ed34c7] Finished in 0.260 seconds with exit status 0 (successful).
+  INFO [fd0f3238] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/log /home/deployer/apps/toy_app/releases/20180114135124/log as root@35.198.205.200
+ DEBUG [fd0f3238] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/log /home/deployer/apps/toy_app/releases/20180114135124/log
+  INFO [fd0f3238] Finished in 0.256 seconds with exit status 0 (successful).
+ DEBUG [28ccac28] Running [ -L /home/deployer/apps/toy_app/releases/20180114135124/tmp/pids ] as root@35.198.205.200
+ DEBUG [28ccac28] Command: [ -L /home/deployer/apps/toy_app/releases/20180114135124/tmp/pids ]
+ DEBUG [28ccac28] Finished in 0.242 seconds with exit status 1 (failed).
+ DEBUG [0850b965] Running [ -d /home/deployer/apps/toy_app/releases/20180114135124/tmp/pids ] as root@35.198.205.200
+ DEBUG [0850b965] Command: [ -d /home/deployer/apps/toy_app/releases/20180114135124/tmp/pids ]
+ DEBUG [0850b965] Finished in 0.279 seconds with exit status 1 (failed).
+  INFO [28ff3b36] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/tmp/pids /home/deployer/apps/toy_app/releases/20180114135124/tmp/pids as root@35.198.205.200
+ DEBUG [28ff3b36] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/tmp/pids /home/deployer/apps/toy_app/releases/20180114135124/tmp/pids
+  INFO [28ff3b36] Finished in 0.247 seconds with exit status 0 (successful).
+ DEBUG [197f5551] Running [ -L /home/deployer/apps/toy_app/releases/20180114135124/tmp/cache ] as root@35.198.205.200
+ DEBUG [197f5551] Command: [ -L /home/deployer/apps/toy_app/releases/20180114135124/tmp/cache ]
+ DEBUG [197f5551] Finished in 0.250 seconds with exit status 1 (failed).
+ DEBUG [aca14bdc] Running [ -d /home/deployer/apps/toy_app/releases/20180114135124/tmp/cache ] as root@35.198.205.200
+ DEBUG [aca14bdc] Command: [ -d /home/deployer/apps/toy_app/releases/20180114135124/tmp/cache ]
+ DEBUG [aca14bdc] Finished in 0.258 seconds with exit status 1 (failed).
+  INFO [b47f135c] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/tmp/cache /home/deployer/apps/toy_app/releases/20180114135124/tmp/cache as root@35.198.205.200
+ DEBUG [b47f135c] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/tmp/cache /home/deployer/apps/toy_app/releases/20180114135124/tmp/cache
+  INFO [b47f135c] Finished in 0.240 seconds with exit status 0 (successful).
+ DEBUG [1fa08be1] Running [ -L /home/deployer/apps/toy_app/releases/20180114135124/tmp/sockets ] as root@35.198.205.200
+ DEBUG [1fa08be1] Command: [ -L /home/deployer/apps/toy_app/releases/20180114135124/tmp/sockets ]
+ DEBUG [1fa08be1] Finished in 0.240 seconds with exit status 1 (failed).
+ DEBUG [922358cb] Running [ -d /home/deployer/apps/toy_app/releases/20180114135124/tmp/sockets ] as root@35.198.205.200
+ DEBUG [922358cb] Command: [ -d /home/deployer/apps/toy_app/releases/20180114135124/tmp/sockets ]
+ DEBUG [922358cb] Finished in 0.238 seconds with exit status 1 (failed).
+  INFO [6101dbc0] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/tmp/sockets /home/deployer/apps/toy_app/releases/20180114135124/tmp/sockets as root@35.198.205.200
+ DEBUG [6101dbc0] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/tmp/sockets /home/deployer/apps/toy_app/releases/20180114135124/tmp/sockets
+  INFO [6101dbc0] Finished in 0.240 seconds with exit status 0 (successful).
+ DEBUG [06a9c1d0] Running [ -L /home/deployer/apps/toy_app/releases/20180114135124/vendor/bundle ] as root@35.198.205.200
+ DEBUG [06a9c1d0] Command: [ -L /home/deployer/apps/toy_app/releases/20180114135124/vendor/bundle ]
+ DEBUG [06a9c1d0] Finished in 0.258 seconds with exit status 1 (failed).
+ DEBUG [1016566b] Running [ -d /home/deployer/apps/toy_app/releases/20180114135124/vendor/bundle ] as root@35.198.205.200
+ DEBUG [1016566b] Command: [ -d /home/deployer/apps/toy_app/releases/20180114135124/vendor/bundle ]
+ DEBUG [1016566b] Finished in 0.270 seconds with exit status 1 (failed).
+  INFO [bb674da2] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/vendor/bundle /home/deployer/apps/toy_app/releases/20180114135124/vendor/bundle as root@35.198.205.200
+ DEBUG [bb674da2] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/vendor/bundle /home/deployer/apps/toy_app/releases/20180114135124/vendor/bundle
+  INFO [bb674da2] Finished in 0.250 seconds with exit status 0 (successful).
+ DEBUG [eb673648] Running [ -L /home/deployer/apps/toy_app/releases/20180114135124/public/system ] as root@35.198.205.200
+ DEBUG [eb673648] Command: [ -L /home/deployer/apps/toy_app/releases/20180114135124/public/system ]
+ DEBUG [eb673648] Finished in 0.240 seconds with exit status 1 (failed).
+ DEBUG [96fdc8cf] Running [ -d /home/deployer/apps/toy_app/releases/20180114135124/public/system ] as root@35.198.205.200
+ DEBUG [96fdc8cf] Command: [ -d /home/deployer/apps/toy_app/releases/20180114135124/public/system ]
+ DEBUG [96fdc8cf] Finished in 0.248 seconds with exit status 1 (failed).
+  INFO [b86298e5] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/public/system /home/deployer/apps/toy_app/releases/20180114135124/public/system as root@35.198.205.200
+ DEBUG [b86298e5] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/public/system /home/deployer/apps/toy_app/releases/20180114135124/public/system
+  INFO [b86298e5] Finished in 0.249 seconds with exit status 0 (successful).
+ DEBUG [7b59d2d7] Running [ -L /home/deployer/apps/toy_app/releases/20180114135124/public/uploads ] as root@35.198.205.200
+ DEBUG [7b59d2d7] Command: [ -L /home/deployer/apps/toy_app/releases/20180114135124/public/uploads ]
+ DEBUG [7b59d2d7] Finished in 0.238 seconds with exit status 1 (failed).
+ DEBUG [678f4501] Running [ -d /home/deployer/apps/toy_app/releases/20180114135124/public/uploads ] as root@35.198.205.200
+ DEBUG [678f4501] Command: [ -d /home/deployer/apps/toy_app/releases/20180114135124/public/uploads ]
+ DEBUG [678f4501] Finished in 0.261 seconds with exit status 1 (failed).
+  INFO [f47602b1] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/public/uploads /home/deployer/apps/toy_app/releases/20180114135124/public/uploads as root@35.198.205.200
+ DEBUG [f47602b1] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/public/uploads /home/deployer/apps/toy_app/releases/20180114135124/public/uploads
+  INFO [f47602b1] Finished in 0.239 seconds with exit status 0 (successful).
+ DEBUG [277abd44] Running [ -L /home/deployer/apps/toy_app/releases/20180114135124/public/assets ] as root@35.198.205.200
+ DEBUG [277abd44] Command: [ -L /home/deployer/apps/toy_app/releases/20180114135124/public/assets ]
+ DEBUG [277abd44] Finished in 0.278 seconds with exit status 1 (failed).
+ DEBUG [f6d67413] Running [ -d /home/deployer/apps/toy_app/releases/20180114135124/public/assets ] as root@35.198.205.200
+ DEBUG [f6d67413] Command: [ -d /home/deployer/apps/toy_app/releases/20180114135124/public/assets ]
+ DEBUG [f6d67413] Finished in 0.252 seconds with exit status 1 (failed).
+  INFO [f13620b0] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/public/assets /home/deployer/apps/toy_app/releases/20180114135124/public/assets as root@35.198.205.200
+ DEBUG [f13620b0] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/public/assets /home/deployer/apps/toy_app/releases/20180114135124/public/assets
+  INFO [f13620b0] Finished in 0.238 seconds with exit status 0 (successful).
+ DEBUG [86604ea4] Running if test ! -d /home/deployer/apps/toy_app/releases/20180114135124; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180114135124'" 1>&2; false; fi as root@35.198.205.200
+ DEBUG [86604ea4] Command: if test ! -d /home/deployer/apps/toy_app/releases/20180114135124; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180114135124'" 1>&2; false; fi
+ DEBUG [86604ea4] Finished in 0.259 seconds with exit status 0 (successful).
+ DEBUG [9cceec9a] Running /usr/local/rvm/bin/rvm 2.5.0 do bundle check --path /home/deployer/apps/toy_app/shared/bundle as root@35.198.205.200
+ DEBUG [9cceec9a] Command: cd /home/deployer/apps/toy_app/releases/20180114135124 && /usr/local/rvm/bin/rvm 2.5.0 do bundle check --path /home/deployer/apps/toy_app/shared/bundle
+ DEBUG [9cceec9a] 	[31mhttps://github.com/seuros/capistrano-puma.git (at master@81647bc) is not yet
+ DEBUG [9cceec9a] 	
+ DEBUG [9cceec9a] 	checked out. Run `bundle install` first.[0m
+ DEBUG [9cceec9a] 	
+ DEBUG [9cceec9a] Finished in 0.847 seconds with exit status 11 (failed).
+  INFO [36b815d4] Running /usr/local/rvm/bin/rvm 2.5.0 do bundle install --path /home/deployer/apps/toy_app/shared/bundle --without development test --deployment --quiet as root@35.198.205.200
+ DEBUG [36b815d4] Command: cd /home/deployer/apps/toy_app/releases/20180114135124 && /usr/local/rvm/bin/rvm 2.5.0 do bundle install --path /home/deployer/apps/toy_app/shared/bundle --without development test --deployment --quiet
+  INFO [36b815d4] Finished in 2.408 seconds with exit status 0 (successful).
+ DEBUG [80e5738b] Running if test ! -d /home/deployer/apps/toy_app/releases/20180114135124; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180114135124'" 1>&2; false; fi as root@35.198.205.200
+ DEBUG [80e5738b] Command: if test ! -d /home/deployer/apps/toy_app/releases/20180114135124; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180114135124'" 1>&2; false; fi
+ DEBUG [80e5738b] Finished in 0.261 seconds with exit status 0 (successful).
+  INFO [32db8607] Running /usr/local/rvm/bin/rvm 2.5.0 do bundle exec rake assets:precompile as root@35.198.205.200
+ DEBUG [32db8607] Command: cd /home/deployer/apps/toy_app/releases/20180114135124 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; /usr/local/rvm/bin/rvm 2.5.0 do bundle exec rake assets:precompile )
+ DEBUG [32db8607] 	Yarn executable was not detected in the system.
+ DEBUG [32db8607] 	
+ DEBUG [32db8607] 	Download Yarn at https://yarnpkg.com/en/docs/install
+ DEBUG [32db8607] 	
+  INFO [32db8607] Finished in 2.198 seconds with exit status 0 (successful).
+ DEBUG [2ce57e8b] Running if test ! -d /home/deployer/apps/toy_app/releases/20180114135124; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180114135124'" 1>&2; false; fi as root@35.198.205.200
+ DEBUG [2ce57e8b] Command: if test ! -d /home/deployer/apps/toy_app/releases/20180114135124; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180114135124'" 1>&2; false; fi
+ DEBUG [2ce57e8b] Finished in 0.280 seconds with exit status 0 (successful).
+  INFO [6d57ef3f] Running /usr/bin/env mkdir -p /home/deployer/apps/toy_app/releases/20180114135124/assets_manifest_backup as root@35.198.205.200
+ DEBUG [6d57ef3f] Command: cd /home/deployer/apps/toy_app/releases/20180114135124 && /usr/bin/env mkdir -p /home/deployer/apps/toy_app/releases/20180114135124/assets_manifest_backup
+  INFO [6d57ef3f] Finished in 0.248 seconds with exit status 0 (successful).
+ DEBUG [916020ba] Running /usr/bin/env ls /home/deployer/apps/toy_app/releases/20180114135124/public/assets/.sprockets-manifest* as root@35.198.205.200
+ DEBUG [916020ba] Command: cd /home/deployer/apps/toy_app/releases/20180114135124 && /usr/bin/env ls /home/deployer/apps/toy_app/releases/20180114135124/public/assets/.sprockets-manifest*
+ DEBUG [916020ba] 	/home/deployer/apps/toy_app/releases/20180114135124/public/assets/.sprockets-manifest-3c40280e5d5ca4ff30da7da8f7c98536.json
+ DEBUG [916020ba] 	
+ DEBUG [916020ba] Finished in 0.260 seconds with exit status 0 (successful).
+ DEBUG [e8f765d5] Running /usr/bin/env ls /home/deployer/apps/toy_app/releases/20180114135124/public/assets/.sprockets-manifest* as root@35.198.205.200
+ DEBUG [e8f765d5] Command: cd /home/deployer/apps/toy_app/releases/20180114135124 && /usr/bin/env ls /home/deployer/apps/toy_app/releases/20180114135124/public/assets/.sprockets-manifest*
+ DEBUG [e8f765d5] 	/home/deployer/apps/toy_app/releases/20180114135124/public/assets/.sprockets-manifest-3c40280e5d5ca4ff30da7da8f7c98536.json
+ DEBUG [e8f765d5] 	
+ DEBUG [e8f765d5] Finished in 0.249 seconds with exit status 0 (successful).
+  INFO [9673f964] Running /usr/bin/env cp /home/deployer/apps/toy_app/releases/20180114135124/public/assets/.sprockets-manifest-3c40280e5d5ca4ff30da7da8f7c98536.json /home/deployer/apps/toy_app/releases/20180114135124/assets_manifest_backup as root@35.198.205.200
+ DEBUG [9673f964] Command: cd /home/deployer/apps/toy_app/releases/20180114135124 && /usr/bin/env cp /home/deployer/apps/toy_app/releases/20180114135124/public/assets/.sprockets-manifest-3c40280e5d5ca4ff30da7da8f7c98536.json /home/deployer/apps/toy_app/releases/20180114135124/assets_manifest_backup
+  INFO [9673f964] Finished in 0.255 seconds with exit status 0 (successful).
+  INFO [deploy:db:create] Run `rake db:create`
+ DEBUG [f6b5df31] Running if test ! -d /home/deployer/apps/toy_app/releases/20180114135124; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180114135124'" 1>&2; false; fi as root@35.198.205.200
+ DEBUG [f6b5df31] Command: if test ! -d /home/deployer/apps/toy_app/releases/20180114135124; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180114135124'" 1>&2; false; fi
+ DEBUG [f6b5df31] Finished in 0.250 seconds with exit status 0 (successful).
+  INFO [7152956c] Running /usr/local/rvm/bin/rvm 2.5.0 do bundle exec rake db:create as root@35.198.205.200
+ DEBUG [7152956c] Command: cd /home/deployer/apps/toy_app/releases/20180114135124 && ( export RAILS_ENV="production" ; /usr/local/rvm/bin/rvm 2.5.0 do bundle exec rake db:create )
+ DEBUG [7152956c] 	Created database 'db/production.sqlite3'
+ DEBUG [7152956c] 	
+  INFO [7152956c] Finished in 1.731 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [08485f89] Running if test ! -d /home/deployer/apps/toy_app/releases/20180114135124; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180114135124'" 1>&2; false; fi as root@35.198.205.200
+ DEBUG [08485f89] Command: if test ! -d /home/deployer/apps/toy_app/releases/20180114135124; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180114135124'" 1>&2; false; fi
+ DEBUG [08485f89] Finished in 0.304 seconds with exit status 0 (successful).
+  INFO [7b0ba8ff] Running /usr/local/rvm/bin/rvm 2.5.0 do bundle exec rake db:migrate as root@35.198.205.200
+ DEBUG [7b0ba8ff] Command: cd /home/deployer/apps/toy_app/releases/20180114135124 && ( export RAILS_ENV="production" ; /usr/local/rvm/bin/rvm 2.5.0 do bundle exec rake db:migrate )
+  INFO [7b0ba8ff] Finished in 2.049 seconds with exit status 0 (successful).
+  INFO [65154160] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/releases/20180114135124 /home/deployer/apps/toy_app/releases/current as root@35.198.205.200
+ DEBUG [65154160] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/releases/20180114135124 /home/deployer/apps/toy_app/releases/current
+  INFO [65154160] Finished in 0.258 seconds with exit status 0 (successful).
+  INFO [1f212307] Running /usr/bin/env mv /home/deployer/apps/toy_app/releases/current /home/deployer/apps/toy_app as root@35.198.205.200
+ DEBUG [1f212307] Command: /usr/bin/env mv /home/deployer/apps/toy_app/releases/current /home/deployer/apps/toy_app
+  INFO [1f212307] Finished in 0.278 seconds with exit status 0 (successful).
+  INFO [ee139e59] Running /usr/bin/env sudo /usr/bin/monit monitor puma_toy_app_production as root@35.198.205.200
+ DEBUG [ee139e59] Command: /usr/bin/env sudo /usr/bin/monit monitor puma_toy_app_production
+ DEBUG [ee139e59] 	/etc/monit/monitrc:290: Include failed -- Success '/etc/monit/conf-enabled/*'
+ DEBUG [ee139e59] 	
+  INFO [ee139e59] Finished in 0.280 seconds with exit status 0 (successful).
+ DEBUG [3867c1e3] Running /usr/bin/env ls -x /home/deployer/apps/toy_app/releases as root@35.198.205.200
+ DEBUG [3867c1e3] Command: /usr/bin/env ls -x /home/deployer/apps/toy_app/releases
+ DEBUG [3867c1e3] 	20180114123600
+ DEBUG [3867c1e3] 		
+ DEBUG [3867c1e3] 	20180114132658
+ DEBUG [3867c1e3] 		
+ DEBUG [3867c1e3] 	20180114134209
+ DEBUG [3867c1e3] 		
+ DEBUG [3867c1e3] 	20180114134509
+ DEBUG [3867c1e3] 		
+ DEBUG [3867c1e3] 	20180114134733
+ DEBUG [3867c1e3] 	
+ DEBUG [3867c1e3] 	20180114135124
+ DEBUG [3867c1e3] 	
+ DEBUG [3867c1e3] Finished in 0.368 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 35.198.205.200
+ DEBUG [cd449ac1] Running [ -d /home/deployer/apps/toy_app/current ] as root@35.198.205.200
+ DEBUG [cd449ac1] Command: [ -d /home/deployer/apps/toy_app/current ]
+ DEBUG [cd449ac1] Finished in 0.237 seconds with exit status 0 (successful).
+ DEBUG [9ffce1c0] Running /usr/bin/env readlink /home/deployer/apps/toy_app/current as root@35.198.205.200
+ DEBUG [9ffce1c0] Command: /usr/bin/env readlink /home/deployer/apps/toy_app/current
+ DEBUG [9ffce1c0] 	/home/deployer/apps/toy_app/releases/20180114135124
+ DEBUG [9ffce1c0] 	
+ DEBUG [9ffce1c0] Finished in 0.274 seconds with exit status 0 (successful).
+  INFO [11088b98] Running /usr/bin/env rm -rf /home/deployer/apps/toy_app/releases/20180114123600 as root@35.198.205.200
+ DEBUG [11088b98] Command: /usr/bin/env rm -rf /home/deployer/apps/toy_app/releases/20180114123600
+  INFO [11088b98] Finished in 0.246 seconds with exit status 0 (successful).
+ DEBUG [7648cdb4] Running if test ! -d /home/deployer/apps/toy_app/releases; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases'" 1>&2; false; fi as root@35.198.205.200
+ DEBUG [7648cdb4] Command: if test ! -d /home/deployer/apps/toy_app/releases; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases'" 1>&2; false; fi
+ DEBUG [7648cdb4] Finished in 0.239 seconds with exit status 0 (successful).
+  INFO [3c2ccdaa] Running /usr/bin/env echo "Branch master (at 6760c40bb0884bb7e72db3b40254f445a56325f7) deployed as release 20180114135124 by mat" >> /home/deployer/apps/toy_app/revisions.log as root@35.198.205.200
+ DEBUG [3c2ccdaa] Command: cd /home/deployer/apps/toy_app/releases && /usr/bin/env echo "Branch master (at 6760c40bb0884bb7e72db3b40254f445a56325f7) deployed as release 20180114135124 by mat" >> /home/deployer/apps/toy_app/revisions.log
+  INFO [3c2ccdaa] Finished in 0.271 seconds with exit status 0 (successful).
+ DEBUG [ddb48557] Running if test ! -d /home/deployer/apps/toy_app/current; then echo "Directory does not exist '/home/deployer/apps/toy_app/current'" 1>&2; false; fi as root@35.198.205.200
+ DEBUG [ddb48557] Command: if test ! -d /home/deployer/apps/toy_app/current; then echo "Directory does not exist '/home/deployer/apps/toy_app/current'" 1>&2; false; fi
+ DEBUG [ddb48557] Finished in 0.256 seconds with exit status 0 (successful).
+ DEBUG [a1b3bc91] Running [ -f /home/deployer/apps/toy_app/shared/tmp/pids/puma.pid ] as root@35.198.205.200
+ DEBUG [a1b3bc91] Command: [ -f /home/deployer/apps/toy_app/shared/tmp/pids/puma.pid ]
+ DEBUG [a1b3bc91] Finished in 0.260 seconds with exit status 0 (successful).
+ DEBUG [71d15434] Running /usr/bin/env kill -0 $( cat /home/deployer/apps/toy_app/shared/tmp/pids/puma.pid ) as root@35.198.205.200
+ DEBUG [71d15434] Command: cd /home/deployer/apps/toy_app/current && ( export RACK_ENV="production" ; /usr/bin/env kill -0 $( cat /home/deployer/apps/toy_app/shared/tmp/pids/puma.pid ) )
+ DEBUG [71d15434] Finished in 0.238 seconds with exit status 0 (successful).
+  INFO [18f6f2ec] Running /usr/local/rvm/bin/rvm 2.5.0 do bundle exec pumactl -S /home/deployer/apps/toy_app/shared/tmp/pids/puma.state -F /home/deployer/apps/toy_app/shared/config/puma.rb restart as root@35.198.205.200
+ DEBUG [18f6f2ec] Command: cd /home/deployer/apps/toy_app/current && ( export RACK_ENV="production" ; /usr/local/rvm/bin/rvm 2.5.0 do bundle exec pumactl -S /home/deployer/apps/toy_app/shared/tmp/pids/puma.state -F /home/deployer/apps/toy_app/shared/config/puma.rb restart )
+ DEBUG [18f6f2ec] 	Command restart sent success
+ DEBUG [18f6f2ec] 	
+  INFO [18f6f2ec] Finished in 0.880 seconds with exit status 0 (successful).
+  INFO [53078721] Running /usr/bin/env sudo service nginx restart as root@35.198.205.200
+ DEBUG [53078721] Command: /usr/bin/env sudo service nginx restart
+  INFO [53078721] Finished in 0.377 seconds with exit status 0 (successful).

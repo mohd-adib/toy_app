@@ -21,5 +21,11 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  database: toy_app
+  adapter: postgresql
+  username: deployer
+  password: secret
+  host: localhost
+  encoding: unicode
+  port: 5432
+  pool: 5
