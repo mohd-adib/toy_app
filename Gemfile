@@ -58,6 +58,7 @@ group :development do
   gem 'capistrano-rails-console'
   gem 'capistrano-upload-config'
   gem 'sshkit-sudo'
+  gem 'listen'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
