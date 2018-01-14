@@ -49,6 +49,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'capistrano'
+  gem 'capistrano-bundler'
   gem 'capistrano-rvm'
   gem 'capistrano-nginx'
   gem 'capistrano3-puma', github: "seuros/capistrano-puma"

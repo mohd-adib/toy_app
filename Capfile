@@ -11,6 +11,7 @@ install_plugin Capistrano::Puma::Nginx  # if you want to upload a nginx site tem
 require 'capistrano/puma/nginx'
 require 'capistrano/rvm'
 require 'capistrano/rails'
+require 'capistrano/bundler'
 require 'capistrano/rails/db'
 require 'capistrano/rails/console'
 require 'capistrano/upload-config'
