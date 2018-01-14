@@ -4,8 +4,8 @@ lock "~> 3.10.1"
 set :application, "toy_app"
 set :repo_url, "git@github.com:mohd-adib/toy_app.git"
 set :rails_env, 'production'
-server '35.198.205.200', user: "#{fetch(:user)}", roles: %w{app db web}, primary: true
-set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
+server '35.198.205.200', user: "deployer", roles: %w{app db web}, primary: true
+set :deploy_to,       "/home/deployer/apps/#{fetch(:application)}"
 set :pty, true
 
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml', 'config/puma.rb')
@@ -14,6 +14,12 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 set :config_example_suffix, '.example'
 set :config_files, %w{config/database.yml config/secrets.yml}
 set :puma_conf, "#{shared_path}/config/puma.rb"
+
+before "deploy:starting", "deploy:setup_maintenance_for_deploy"
+before "deploy:starting", "maintenance:enable"
+# after 'deploy:migrate', 'deploy:seed'
+after 'deploy:publishing', 'deploy:restart'
+after "deploy:finished", "maintenance:disable"
 
 namespace :deploy do
   before 'check:linked_files', 'config:push'
