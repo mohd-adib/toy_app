@@ -14,7 +14,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 set :config_example_suffix, '.example'
 set :config_files, %w{config/database.yml config/secrets.yml}
 set :puma_conf, "#{shared_path}/config/puma.rb"
-append :rbenv_map_bins, 'puma', 'pumactl'
+set :rvm_map_bins, %w{gem rake ruby rails bundle puma pumactl}
 set :rvm_ruby_version, '2.5.0'
 
 
