@@ -15,11 +15,27 @@ set :config_example_suffix, '.example'
 set :config_files, %w{config/database.yml config/secrets.yml}
 set :puma_conf, "#{shared_path}/config/puma.rb"
 
-before "deploy:starting", "deploy:setup_maintenance_for_deploy"
-before "deploy:starting", "maintenance:enable"
-# after 'deploy:migrate', 'deploy:seed'
-after 'deploy:publishing', 'deploy:restart'
-after "deploy:finished", "maintenance:disable"
+namespace :deploy do
+
+  task :restart do
+    on roles(:web) do
+      execute "mkdir -p #{current_path}/tmp"
+      execute "touch #{current_path}/tmp/restart.txt"
+    end
+  end
+
+  task :create_db do
+    on roles(:web) do
+      execute "cd #{current_path}; bundle exec rake db:create RAILS_ENV=#{rails_env}"
+    end
+  end
+
+  after "deploy", "deploy:create_db"
+  after "deploy", "deploy:migrate"
+  after "finishing", "deploy:restart"
+end
+
+
 
 namespace :deploy do
   before 'check:linked_files', 'config:push'
