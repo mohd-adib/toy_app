@@ -4,8 +4,8 @@ lock "~> 3.10.1"
 set :application, "toy_app"
 set :repo_url, "git@github.com:mohd-adib/toy_app.git"
 set :rails_env, 'production'
-# server '35.197.136.5', user: "root", roles: %w{app db web}, primary: true
-server '35.198.205.200', user: "root", roles: %w{app db web}, primary: true
+server '35.197.136.5', user: "root", roles: %w{app db web}, primary: true
+# server '35.198.205.200', user: "root", roles: %w{app db web}, primary: true
 
 set :deploy_to,       "/root/apps/#{fetch(:application)}"
 set :pty, true
