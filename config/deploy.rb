@@ -18,7 +18,8 @@ set :config_files, %w{config/database.yml config/secrets.yml}
 set :puma_conf, "#{shared_path}/config/puma.rb"
 set :rvm_map_bins, %w{gem rake ruby rails bundle puma pumactl}
 set :rvm_ruby_version, '2.5.0'
-set :format_options, log_file: "storage/logs/capistrano.log"
+# set :format_options, log_file: "storage/logs/capistrano.log"
+set :linked_dirs, %w{tmp/pids tmp/sockets log}
 
 namespace :logs do
   desc "tail rails logs" 
