@@ -23,8 +23,8 @@ test:
 production:
   database: toy_app
   adapter: postgresql
-  username: root
-  password: toor
+  username: deployer
+  password: secret
   host: localhost
   encoding: unicode
   port: 5432
