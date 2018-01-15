@@ -4809,3 +4809,1420 @@
  DEBUG [9136dafc] Finished in 0.622 seconds with exit status 0 (successful).
   WARN Already Exists: ./config/database.production.yml
   WARN Already Exists: ./config/secrets.production.yml
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-01-15 10:07:15 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [c5ca7bfa] Running [ -d ~/.rvm ] as root@35.197.136.5
+ DEBUG [c5ca7bfa] Command: [ -d ~/.rvm ]
+ DEBUG [c5ca7bfa] Finished in 2.786 seconds with exit status 1 (failed).
+ DEBUG [a6f49a8d] Running [ -d /usr/local/rvm ] as root@35.197.136.5
+ DEBUG [a6f49a8d] Command: [ -d /usr/local/rvm ]
+ DEBUG [a6f49a8d] Finished in 0.279 seconds with exit status 0 (successful).
+ DEBUG [7c35fefb] Running /usr/local/rvm/bin/rvm version as root@35.197.136.5
+ DEBUG [7c35fefb] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [7c35fefb] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [7c35fefb] 	
+ DEBUG [7c35fefb] Finished in 0.414 seconds with exit status 0 (successful).
+ DEBUG [251f9c4b] Running /usr/local/rvm/bin/rvm current as root@35.197.136.5
+ DEBUG [251f9c4b] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [251f9c4b] 	ruby-2.5.0
+ DEBUG [251f9c4b] 	
+ DEBUG [251f9c4b] Finished in 0.432 seconds with exit status 0 (successful).
+ DEBUG [7d6ef6c7] Running /usr/local/rvm/bin/rvm 2.5.0 do ruby --version as root@35.197.136.5
+ DEBUG [7d6ef6c7] Command: /usr/local/rvm/bin/rvm 2.5.0 do ruby --version
+ DEBUG [7d6ef6c7] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+ DEBUG [7d6ef6c7] 	
+ DEBUG [7d6ef6c7] Finished in 0.550 seconds with exit status 0 (successful).
+  INFO [c425c31e] Running /usr/bin/env mkdir -p /tmp as root@35.197.136.5
+ DEBUG [c425c31e] Command: /usr/bin/env mkdir -p /tmp
+  INFO [c425c31e] Finished in 0.314 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-toy_app-production-mat.sh 0.0%
+  INFO Uploading /tmp/git-ssh-toy_app-production-mat.sh 100.0%
+  INFO [292b6020] Running /usr/bin/env chmod 700 /tmp/git-ssh-toy_app-production-mat.sh as root@35.197.136.5
+ DEBUG [292b6020] Command: /usr/bin/env chmod 700 /tmp/git-ssh-toy_app-production-mat.sh
+  INFO [292b6020] Finished in 0.300 seconds with exit status 0 (successful).
+  INFO [0c1f983c] Running /usr/bin/env git ls-remote git@github.com:mohd-adib/toy_app.git HEAD as root@35.197.136.5
+ DEBUG [0c1f983c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env git ls-remote git@github.com:mohd-adib/toy_app.git HEAD )
+ DEBUG [0c1f983c] 	Warning: Permanently added 'github.com,192.30.255.112' (RSA) to the list of known hosts.
+ DEBUG [0c1f983c] 	
+ DEBUG [0c1f983c] 	404009f78a34412ad0f971cfba874e875b5ca4d1
+ DEBUG [0c1f983c] 		
+ DEBUG [0c1f983c] 	HEAD
+  INFO [0c1f983c] Finished in 2.368 seconds with exit status 0 (successful).
+  INFO [9d31756d] Running /usr/bin/env mkdir -p /home/deployer/apps/toy_app/shared /home/deployer/apps/toy_app/releases as root@35.197.136.5
+ DEBUG [9d31756d] Command: /usr/bin/env mkdir -p /home/deployer/apps/toy_app/shared /home/deployer/apps/toy_app/releases
+  INFO [9d31756d] Finished in 0.267 seconds with exit status 0 (successful).
+  INFO [80179e3a] Running /usr/bin/env mkdir -p /home/deployer/apps/toy_app/shared/log /home/deployer/apps/toy_app/shared/tmp/pids /home/deployer/apps/toy_app/shared/tmp/cache /home/deployer/apps/toy_app/shared/tmp/sockets /home/deployer/apps/toy_app/shared/vendor/bundle /home/deployer/apps/toy_app/shared/public/system /home/deployer/apps/toy_app/shared/public/uploads /home/deployer/apps/toy_app/shared/public/assets as root@35.197.136.5
+ DEBUG [80179e3a] Command: /usr/bin/env mkdir -p /home/deployer/apps/toy_app/shared/log /home/deployer/apps/toy_app/shared/tmp/pids /home/deployer/apps/toy_app/shared/tmp/cache /home/deployer/apps/toy_app/shared/tmp/sockets /home/deployer/apps/toy_app/shared/vendor/bundle /home/deployer/apps/toy_app/shared/public/system /home/deployer/apps/toy_app/shared/public/uploads /home/deployer/apps/toy_app/shared/public/assets
+  INFO [80179e3a] Finished in 0.292 seconds with exit status 0 (successful).
+  INFO [5ec3cce8] Running /usr/bin/env mkdir -p /home/deployer/apps/toy_app/shared/config as root@35.197.136.5
+ DEBUG [5ec3cce8] Command: /usr/bin/env mkdir -p /home/deployer/apps/toy_app/shared/config
+  INFO [5ec3cce8] Finished in 0.255 seconds with exit status 0 (successful).
+ DEBUG [a2b33677] Running if test ! -d /home/deployer/apps/toy_app/shared; then echo "Directory does not exist '/home/deployer/apps/toy_app/shared'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [a2b33677] Command: if test ! -d /home/deployer/apps/toy_app/shared; then echo "Directory does not exist '/home/deployer/apps/toy_app/shared'" 1>&2; false; fi
+ DEBUG [a2b33677] Finished in 0.311 seconds with exit status 0 (successful).
+  INFO Uploading config ./config/database.production.yml as config/database.yml
+ DEBUG Uploading /home/deployer/apps/toy_app/shared/config/database.yml 0.0%
+  INFO Uploading /home/deployer/apps/toy_app/shared/config/database.yml 100.0%
+  INFO Uploading config ./config/secrets.production.yml as config/secrets.yml
+ DEBUG Uploading /home/deployer/apps/toy_app/shared/config/secrets.yml 0.0%
+  INFO Uploading /home/deployer/apps/toy_app/shared/config/secrets.yml 100.0%
+ DEBUG Uploading /home/deployer/apps/toy_app/shared/config/puma.rb 0.0%
+  INFO Uploading /home/deployer/apps/toy_app/shared/config/puma.rb 100.0%
+ DEBUG Uploading /tmp/nginx_toy_app_production 0.0%
+  INFO Uploading /tmp/nginx_toy_app_production 100.0%
+  INFO [a96565ea] Running /usr/bin/env sudo mv /tmp/nginx_toy_app_production /etc/nginx/sites-available/toy_app_production as root@35.197.136.5
+ DEBUG [a96565ea] Command: /usr/bin/env sudo mv /tmp/nginx_toy_app_production /etc/nginx/sites-available/toy_app_production
+  INFO [a96565ea] Finished in 0.269 seconds with exit status 0 (successful).
+  INFO [a0aee515] Running /usr/bin/env sudo ln -fs /etc/nginx/sites-available/toy_app_production /etc/nginx/sites-enabled/toy_app_production as root@35.197.136.5
+ DEBUG [a0aee515] Command: /usr/bin/env sudo ln -fs /etc/nginx/sites-available/toy_app_production /etc/nginx/sites-enabled/toy_app_production
+  INFO [a0aee515] Finished in 0.268 seconds with exit status 0 (successful).
+ DEBUG [42bc0543] Running [ -f /home/deployer/apps/toy_app/shared/config/database.yml ] as root@35.197.136.5
+ DEBUG [42bc0543] Command: [ -f /home/deployer/apps/toy_app/shared/config/database.yml ]
+ DEBUG [42bc0543] Finished in 0.250 seconds with exit status 0 (successful).
+ DEBUG [9a13c121] Running [ -f /home/deployer/apps/toy_app/shared/config/secrets.yml ] as root@35.197.136.5
+ DEBUG [9a13c121] Command: [ -f /home/deployer/apps/toy_app/shared/config/secrets.yml ]
+ DEBUG [9a13c121] Finished in 0.239 seconds with exit status 0 (successful).
+ DEBUG [e0e1daed] Running [ -f /home/deployer/apps/toy_app/shared/config/puma.rb ] as root@35.197.136.5
+ DEBUG [e0e1daed] Command: [ -f /home/deployer/apps/toy_app/shared/config/puma.rb ]
+ DEBUG [e0e1daed] Finished in 0.249 seconds with exit status 0 (successful).
+ DEBUG [c705acf3] Running [ -f /home/deployer/apps/toy_app/shared/config/puma.rb ] as root@35.197.136.5
+ DEBUG [c705acf3] Command: [ -f /home/deployer/apps/toy_app/shared/config/puma.rb ]
+ DEBUG [c705acf3] Finished in 0.248 seconds with exit status 0 (successful).
+ DEBUG [78d44969] Running [ -f /home/deployer/apps/toy_app/current/REVISION ] as root@35.197.136.5
+ DEBUG [78d44969] Command: [ -f /home/deployer/apps/toy_app/current/REVISION ]
+ DEBUG [78d44969] Finished in 0.238 seconds with exit status 1 (failed).
+ DEBUG [394c3bf5] Running [ -f /home/deployer/apps/toy_app/repo/HEAD ] as root@35.197.136.5
+ DEBUG [394c3bf5] Command: [ -f /home/deployer/apps/toy_app/repo/HEAD ]
+ DEBUG [394c3bf5] Finished in 0.257 seconds with exit status 1 (failed).
+ DEBUG [36656b9f] Running if test ! -d /home/deployer/apps/toy_app; then echo "Directory does not exist '/home/deployer/apps/toy_app'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [36656b9f] Command: if test ! -d /home/deployer/apps/toy_app; then echo "Directory does not exist '/home/deployer/apps/toy_app'" 1>&2; false; fi
+ DEBUG [36656b9f] Finished in 0.270 seconds with exit status 0 (successful).
+  INFO [580cbced] Running /usr/bin/env git clone --mirror git@github.com:mohd-adib/toy_app.git /home/deployer/apps/toy_app/repo as root@35.197.136.5
+ DEBUG [580cbced] Command: cd /home/deployer/apps/toy_app && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env git clone --mirror git@github.com:mohd-adib/toy_app.git /home/deployer/apps/toy_app/repo )
+ DEBUG [580cbced] 	Cloning into bare repository '/home/deployer/apps/toy_app/repo'...
+ DEBUG [580cbced] 	
+ DEBUG [580cbced] 	remote: Counting objects: 232, done.[K
+ DEBUG [580cbced] 	
+ DEBUG [580cbced] 	remote: Compressing objects:   0% (1/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:   1% (2/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:   2% (4/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:   3% (5/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:   4% (7/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objec
+ DEBUG [580cbced] 	ts:   5% (8/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:   6% (10/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:   7% (11/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:   8% (13/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:   9% (14/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  10% (16/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  11% (18/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  12% (19/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  13% (21/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  14% (22/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  15% (24/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  16% (25/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  17% (27/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  18% (28/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  19% (30/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  20% (31/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  21% (33/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  22% (35/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  23% (36/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  24% (38/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  25% (39/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  26% (41/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  27% (42/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  28% (44/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  29% (45/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  30% (47/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  31% (49/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  32% (50/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  33% (52/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  34% (53/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  35% (55/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  36% (56/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  37% (58/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  38% (59/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  39% (61/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  40% (62/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  41% (64/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  42% (66/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  43% (67/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  44% (69/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  45% (70/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  46% (72/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  47% (73/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  48% (75/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  49% (76/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  50% (78/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  51% (80/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  52% (81/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  53% (83/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  54% (84/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  55% (86/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  56% (87/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  57% (89/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  58% (90/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  59% (92/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  60% (93/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  61% (95/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  62% (97/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  63% (98/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  64% (100/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  65% (101/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  66% (103/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  67% (104/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  68% (106/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  69% (107/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  70% (109/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  71% (111/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  72% (112/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  73% (114/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  74% (115/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  75% (117/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  76% (118/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  77% (120/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  78% (121/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  79% (123/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  80% (124/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  81% (126/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  82% (128/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  83% (129/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  84% (131/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  85% (132/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  86% (134/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  87% (135/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  88% (137/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  89% (138/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  90% (140/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  91% (142/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  92% (143/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  93% (145/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  94% (146/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  95% (148/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  96% (149/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  97% (151/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  98% (152/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects:  99% (154/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects: 100% (155/155)   [K
+ DEBUG [580cbced] 	remote: Compressing objects: 100% (155/155), done.[K
+ DEBUG [580cbced] 	
+ DEBUG [580cbced] 	Receiving objects:   0% (1/232)   
+ DEBUG [580cbced] 	Receiving objects:   1% (3/232)   
+ DEBUG [580cbced] 	Receiving objects:   2% (5/232)   
+ DEBUG [580cbced] 	Receiving objects:   3% (7/232)   
+ DEBUG [580cbced] 	Receiving objects:   4% (10/232)   
+ DEBUG [580cbced] 	Receiving objects:   5% (12/232)   
+ DEBUG [580cbced] 	Receiving objects:   6% (14/232)   
+ DEBUG [580cbced] 	Receiving objects:   7% (17/232)   
+ DEBUG [580cbced] 	Receiving objects:   8% (19/232)   
+ DEBUG [580cbced] 	Receiving objects:   9% (21/232)   
+ DEBUG [580cbced] 	Receiving objects:  10% (24/232)   
+ DEBUG [580cbced] 	Receiving objects:  11% (26/232)   
+ DEBUG [580cbced] 	Receiving objects:  12% (28/232)   
+ DEBUG [580cbced] 	Receiving objects:  13% (31/232)   
+ DEBUG [580cbced] 	Receiving objects:  14% (33/232)   
+ DEBUG [580cbced] 	Receiving objects:  15% (35/232)   
+ DEBUG [580cbced] 	Receiving objects:  16% (38/232)   
+ DEBUG [580cbced] 	Receiving objects:  17% (40/232)   
+ DEBUG [580cbced] 	Receiving objects:  18% (42/232)   
+ DEBUG [580cbced] 	Receiving objects:  19% (45/232)   
+ DEBUG [580cbced] 	Receiving objects:  20% (47/232)   
+ DEBUG [580cbced] 	Receiving objects:  21% (49/232)   
+ DEBUG [580cbced] 	Receiving objects:  22% (52/232)   
+ DEBUG [580cbced] 	Receiving objects:  23% (54/232)   
+ DEBUG [580cbced] 	Receiving objects:  24% (56/232)   
+ DEBUG [580cbced] 	Receiving objects:  25% (58/232)   
+ DEBUG [580cbced] 	Receiving objects:  26% (61/232)   
+ DEBUG [580cbced] 	Receiving objects:  27% (63/232)   
+ DEBUG [580cbced] 	Receiving objects:  28% (65/232)   
+ DEBUG [580cbced] 	Receiving objects:  29% (68/232)   
+ DEBUG [580cbced] 	Receiving objects:  30% (70/232)   
+ DEBUG [580cbced] 	Receiving objects:  31% (72/232)   
+ DEBUG [580cbced] 	Receiving objects:  32% (75/232)   
+ DEBUG [580cbced] 	Receiving objects:  33% (77/232)   
+ DEBUG [580cbced] 	Receiving objects:  34% (79/232)   
+ DEBUG [580cbced] 	Receiving objects:  35% (82/232)   
+ DEBUG [580cbced] 	Receiving objects:  36% (84/232)   
+ DEBUG [580cbced] 	Receiving objects:  37% (86/232)   
+ DEBUG [580cbced] 	Receiving objects:  38% (89/232)   
+ DEBUG [580cbced] 	Receiving objects:  39% (91/232)   
+ DEBUG [580cbced] 	Receiving objects:  40% (93/232)   
+ DEBUG [580cbced] 	Receiving objects:  41% (96/232)   
+ DEBUG [580cbced] 	Receiving objects:  42% (98/232)   
+ DEBUG [580cbced] 	Receiving objects:  43% (100/232)   
+ DEBUG [580cbced] 	Receiving objects:  44% (103/232)   
+ DEBUG [580cbced] 	Receiving objects:  45% (105/232)   
+ DEBUG [580cbced] 	Receiving objects:  46% (107/232)   
+ DEBUG [580cbced] 	Receiving objects:  47% (110/232)   
+ DEBUG [580cbced] 	Receiving objects:  48% (112/232)   
+ DEBUG [580cbced] 	Receiving objects:  49% (114/232)   
+ DEBUG [580cbced] 	Receiving objects:  50% (116/232)   
+ DEBUG [580cbced] 	Receiving objects:  51% (119/232)   
+ DEBUG [580cbced] 	Receiving objects:  52% (121/232)   
+ DEBUG [580cbced] 	Receiving objects:  53% (123/232)   
+ DEBUG [580cbced] 	Receiving objects:  54% (126/232)   
+ DEBUG [580cbced] 	Receiving objects:  55% (128/232)   
+ DEBUG [580cbced] 	Receiving objects:  56% (130/232)   
+ DEBUG [580cbced] 	Receiving objects:  57% (133/232)   
+ DEBUG [580cbced] 	Receiving objects:  58% (135/232)   
+ DEBUG [580cbced] 	Receiving objects:  59% (137/232)   
+ DEBUG [580cbced] 	Receiving objects:  60% (140/232)   
+ DEBUG [580cbced] 	Receiving objects:  61% (142/232)   
+ DEBUG [580cbced] 	remote: Total 232 (delta 90), reused 185 (delta 43), pack-reused 0[K
+ DEBUG [580cbced] 	
+ DEBUG [580cbced] 	Receiving objects:  62% (144/232)   
+ DEBUG [580cbced] 	Receiving objects:  63% (147/232)   
+ DEBUG [580cbced] 	Receiving objects:  64% (149/232)   
+ DEBUG [580cbced] 	Receiving objects:  65% (151/232)   
+ DEBUG [580cbced] 	Receiving objects:  66% (154/232)   
+ DEBUG [580cbced] 	Receiving objects:  67% (156/232)   
+ DEBUG [580cbced] 	Receiving objects:  68% (158/232)   
+ DEBUG [580cbced] 	Receiving objects:  69% (161/232)   
+ DEBUG [580cbced] 	Receiving objects:  70% (163/232)   
+ DEBUG [580cbced] 	Receiving objects:  71% (165/232)   
+ DEBUG [580cbced] 	Receiving objects:  72% (168/232)   
+ DEBUG [580cbced] 	Receiving objects:  73% (170/232)   
+ DEBUG [580cbced] 	Receiving objects:  74% (172/232)   
+ DEBUG [580cbced] 	Receiving objects:  75% (174/232)   
+ DEBUG [580cbced] 	Receiving objects:  76% (177/232)   
+ DEBUG [580cbced] 	Receiving objects:  77% (179/232)   
+ DEBUG [580cbced] 	Receiving objects:  78% (181/232)   
+ DEBUG [580cbced] 	Receiving objects:  79% (184/232)   
+ DEBUG [580cbced] 	Receiving objects:  80% (186/232)   
+ DEBUG [580cbced] 	Receiving objects:  81% (188/232)   
+ DEBUG [580cbced] 	Receiving objects:  82% (191/232)   
+ DEBUG [580cbced] 	Receiving objects:  83% (193/232)   
+ DEBUG [580cbced] 	Receiving objects:  84% (195/232)   
+ DEBUG [580cbced] 	Receiving objects:  85% (198/232)   
+ DEBUG [580cbced] 	Receiving objects:  86% (200/232)   
+ DEBUG [580cbced] 	Receiving objects:  87% (202/232)   
+ DEBUG [580cbced] 	Receiving objects:  88% (205/232)   
+ DEBUG [580cbced] 	Receiving objects:  89% (207/232)   
+ DEBUG [580cbced] 	Receiving objects:  90% (209/232)   
+ DEBUG [580cbced] 	Receiving objects:  91% (212/232)   
+ DEBUG [580cbced] 	Receiving objects:  92% (214/232)   
+ DEBUG [580cbced] 	Receiving objects:  93% (216/232)   
+ DEBUG [580cbced] 	Receiving objects:  94% (219/232)   
+ DEBUG [580cbced] 	Receiving objects:  95% (221/232)   
+ DEBUG [580cbced] 	Receiving objects:  96% (223/232)   
+ DEBUG [580cbced] 	Receiving objects:  97% (226/232)   
+ DEBUG [580cbced] 	Receiving objects:  98% (228/232)   
+ DEBUG [580cbced] 	Receiving objects:  99% (230/232)   
+ DEBUG [580cbced] 	Receiving objects: 100% (232/232)   
+ DEBUG [580cbced] 	Receiving objects: 100% (232/232), 83.07 KiB | 0 bytes/s, done.
+ DEBUG [580cbced] 	
+ DEBUG [580cbced] 	Resolving deltas:   0% (0/90)   
+ DEBUG [580cbced] 	Resolving deltas:  30% (27/90)   
+ DEBUG [580cbced] 	Resolving deltas:  31% (28/90)   
+ DEBUG [580cbced] 	Resolving deltas:  35% (32/90)   
+ DEBUG [580cbced] 	Resolving deltas:  42% (38/90)   
+ DEBUG [580cbced] 	Resolving deltas:  47% (43/90)   
+ DEBUG [580cbced] 	Resolving deltas:  66% (60/90)   
+ DEBUG [580cbced] 	Resolving deltas:  68% (62/90)   
+ DEBUG [580cbced] 	Resolving deltas:  81% (73/90)   
+ DEBUG [580cbced] 	Resolving deltas:  83% (75/90)   
+ DEBUG [580cbced] 	Resolving deltas:  84% (76/90)   
+ DEBUG [580cbced] 	Resolving deltas:  85% (77/90)   
+ DEBUG [580cbced] 	Resolving deltas:  87% (79/90)   
+ DEBUG [580cbced] 	Resolving deltas:  90% (81/90)   
+ DEBUG [580cbced] 	Resolving deltas: 100% (90/90)   
+ DEBUG [580cbced] 	Resolving deltas: 100% (90/90), done.
+ DEBUG [580cbced] 	
+ DEBUG [580cbced] 	Checking connectivity... 
+ DEBUG [580cbced] 	done.
+ DEBUG [580cbced] 	
+  INFO [580cbced] Finished in 2.982 seconds with exit status 0 (successful).
+ DEBUG [31b8fd56] Running if test ! -d /home/deployer/apps/toy_app/repo; then echo "Directory does not exist '/home/deployer/apps/toy_app/repo'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [31b8fd56] Command: if test ! -d /home/deployer/apps/toy_app/repo; then echo "Directory does not exist '/home/deployer/apps/toy_app/repo'" 1>&2; false; fi
+ DEBUG [31b8fd56] Finished in 0.215 seconds with exit status 0 (successful).
+  INFO [444fec6b] Running /usr/bin/env git remote set-url origin git@github.com:mohd-adib/toy_app.git as root@35.197.136.5
+ DEBUG [444fec6b] Command: cd /home/deployer/apps/toy_app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env git remote set-url origin git@github.com:mohd-adib/toy_app.git )
+  INFO [444fec6b] Finished in 0.238 seconds with exit status 0 (successful).
+  INFO [d3a11fab] Running /usr/bin/env git remote update --prune as root@35.197.136.5
+ DEBUG [d3a11fab] Command: cd /home/deployer/apps/toy_app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d3a11fab] 	Fetching origin
+ DEBUG [d3a11fab] 	
+  INFO [d3a11fab] Finished in 2.350 seconds with exit status 0 (successful).
+ DEBUG [1590f993] Running if test ! -d /home/deployer/apps/toy_app/repo; then echo "Directory does not exist '/home/deployer/apps/toy_app/repo'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [1590f993] Command: if test ! -d /home/deployer/apps/toy_app/repo; then echo "Directory does not exist '/home/deployer/apps/toy_app/repo'" 1>&2; false; fi
+ DEBUG [1590f993] Finished in 0.248 seconds with exit status 0 (successful).
+  INFO [a62c47cf] Running /usr/bin/env mkdir -p /home/deployer/apps/toy_app/releases/20180115020729 as root@35.197.136.5
+ DEBUG [a62c47cf] Command: cd /home/deployer/apps/toy_app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env mkdir -p /home/deployer/apps/toy_app/releases/20180115020729 )
+  INFO [a62c47cf] Finished in 0.258 seconds with exit status 0 (successful).
+  INFO [efffce58] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deployer/apps/toy_app/releases/20180115020729 as root@35.197.136.5
+ DEBUG [efffce58] Command: cd /home/deployer/apps/toy_app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deployer/apps/toy_app/releases/20180115020729 )
+  INFO [efffce58] Finished in 0.268 seconds with exit status 0 (successful).
+ DEBUG [4fd518fe] Running if test ! -d /home/deployer/apps/toy_app/repo; then echo "Directory does not exist '/home/deployer/apps/toy_app/repo'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [4fd518fe] Command: if test ! -d /home/deployer/apps/toy_app/repo; then echo "Directory does not exist '/home/deployer/apps/toy_app/repo'" 1>&2; false; fi
+ DEBUG [4fd518fe] Finished in 0.279 seconds with exit status 0 (successful).
+ DEBUG [960c7f71] Running /usr/bin/env git rev-list --max-count=1 master as root@35.197.136.5
+ DEBUG [960c7f71] Command: cd /home/deployer/apps/toy_app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [960c7f71] 	404009f78a34412ad0f971cfba874e875b5ca4d1
+ DEBUG [960c7f71] 	
+ DEBUG [960c7f71] Finished in 0.279 seconds with exit status 0 (successful).
+ DEBUG [2f22ca0e] Running if test ! -d /home/deployer/apps/toy_app/releases/20180115020729; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180115020729'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [2f22ca0e] Command: if test ! -d /home/deployer/apps/toy_app/releases/20180115020729; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180115020729'" 1>&2; false; fi
+ DEBUG [2f22ca0e] Finished in 0.268 seconds with exit status 0 (successful).
+  INFO [989732d0] Running /usr/bin/env echo "404009f78a34412ad0f971cfba874e875b5ca4d1" >> REVISION as root@35.197.136.5
+ DEBUG [989732d0] Command: cd /home/deployer/apps/toy_app/releases/20180115020729 && /usr/bin/env echo "404009f78a34412ad0f971cfba874e875b5ca4d1" >> REVISION
+  INFO [989732d0] Finished in 0.268 seconds with exit status 0 (successful).
+  INFO [f4eecaa4] Running /usr/bin/env mkdir -p /home/deployer/apps/toy_app/releases/20180115020729/config as root@35.197.136.5
+ DEBUG [f4eecaa4] Command: /usr/bin/env mkdir -p /home/deployer/apps/toy_app/releases/20180115020729/config
+  INFO [f4eecaa4] Finished in 0.269 seconds with exit status 0 (successful).
+ DEBUG [6428f656] Running [ -L /home/deployer/apps/toy_app/releases/20180115020729/config/database.yml ] as root@35.197.136.5
+ DEBUG [6428f656] Command: [ -L /home/deployer/apps/toy_app/releases/20180115020729/config/database.yml ]
+ DEBUG [6428f656] Finished in 0.238 seconds with exit status 1 (failed).
+ DEBUG [c9ebdf45] Running [ -f /home/deployer/apps/toy_app/releases/20180115020729/config/database.yml ] as root@35.197.136.5
+ DEBUG [c9ebdf45] Command: [ -f /home/deployer/apps/toy_app/releases/20180115020729/config/database.yml ]
+ DEBUG [c9ebdf45] Finished in 0.240 seconds with exit status 0 (successful).
+  INFO [312ec2c8] Running /usr/bin/env rm /home/deployer/apps/toy_app/releases/20180115020729/config/database.yml as root@35.197.136.5
+ DEBUG [312ec2c8] Command: /usr/bin/env rm /home/deployer/apps/toy_app/releases/20180115020729/config/database.yml
+  INFO [312ec2c8] Finished in 0.229 seconds with exit status 0 (successful).
+  INFO [b3700da7] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/config/database.yml /home/deployer/apps/toy_app/releases/20180115020729/config/database.yml as root@35.197.136.5
+ DEBUG [b3700da7] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/config/database.yml /home/deployer/apps/toy_app/releases/20180115020729/config/database.yml
+  INFO [b3700da7] Finished in 0.238 seconds with exit status 0 (successful).
+ DEBUG [6164cdf6] Running [ -L /home/deployer/apps/toy_app/releases/20180115020729/config/secrets.yml ] as root@35.197.136.5
+ DEBUG [6164cdf6] Command: [ -L /home/deployer/apps/toy_app/releases/20180115020729/config/secrets.yml ]
+ DEBUG [6164cdf6] Finished in 0.238 seconds with exit status 1 (failed).
+ DEBUG [2d26f5c9] Running [ -f /home/deployer/apps/toy_app/releases/20180115020729/config/secrets.yml ] as root@35.197.136.5
+ DEBUG [2d26f5c9] Command: [ -f /home/deployer/apps/toy_app/releases/20180115020729/config/secrets.yml ]
+ DEBUG [2d26f5c9] Finished in 0.248 seconds with exit status 0 (successful).
+  INFO [8ecc3cdb] Running /usr/bin/env rm /home/deployer/apps/toy_app/releases/20180115020729/config/secrets.yml as root@35.197.136.5
+ DEBUG [8ecc3cdb] Command: /usr/bin/env rm /home/deployer/apps/toy_app/releases/20180115020729/config/secrets.yml
+  INFO [8ecc3cdb] Finished in 0.231 seconds with exit status 0 (successful).
+  INFO [833143e7] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/config/secrets.yml /home/deployer/apps/toy_app/releases/20180115020729/config/secrets.yml as root@35.197.136.5
+ DEBUG [833143e7] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/config/secrets.yml /home/deployer/apps/toy_app/releases/20180115020729/config/secrets.yml
+  INFO [833143e7] Finished in 0.238 seconds with exit status 0 (successful).
+ DEBUG [3446db40] Running [ -L /home/deployer/apps/toy_app/releases/20180115020729/config/puma.rb ] as root@35.197.136.5
+ DEBUG [3446db40] Command: [ -L /home/deployer/apps/toy_app/releases/20180115020729/config/puma.rb ]
+ DEBUG [3446db40] Finished in 0.240 seconds with exit status 1 (failed).
+ DEBUG [db2eb32e] Running [ -f /home/deployer/apps/toy_app/releases/20180115020729/config/puma.rb ] as root@35.197.136.5
+ DEBUG [db2eb32e] Command: [ -f /home/deployer/apps/toy_app/releases/20180115020729/config/puma.rb ]
+ DEBUG [db2eb32e] Finished in 0.237 seconds with exit status 0 (successful).
+  INFO [02644ecf] Running /usr/bin/env rm /home/deployer/apps/toy_app/releases/20180115020729/config/puma.rb as root@35.197.136.5
+ DEBUG [02644ecf] Command: /usr/bin/env rm /home/deployer/apps/toy_app/releases/20180115020729/config/puma.rb
+  INFO [02644ecf] Finished in 0.250 seconds with exit status 0 (successful).
+  INFO [d368e7bf] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/config/puma.rb /home/deployer/apps/toy_app/releases/20180115020729/config/puma.rb as root@35.197.136.5
+ DEBUG [d368e7bf] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/config/puma.rb /home/deployer/apps/toy_app/releases/20180115020729/config/puma.rb
+  INFO [d368e7bf] Finished in 0.238 seconds with exit status 0 (successful).
+  INFO [acf438f4] Running /usr/bin/env mkdir -p /home/deployer/apps/toy_app/releases/20180115020729 /home/deployer/apps/toy_app/releases/20180115020729/tmp /home/deployer/apps/toy_app/releases/20180115020729/vendor /home/deployer/apps/toy_app/releases/20180115020729/public as root@35.197.136.5
+ DEBUG [acf438f4] Command: /usr/bin/env mkdir -p /home/deployer/apps/toy_app/releases/20180115020729 /home/deployer/apps/toy_app/releases/20180115020729/tmp /home/deployer/apps/toy_app/releases/20180115020729/vendor /home/deployer/apps/toy_app/releases/20180115020729/public
+  INFO [acf438f4] Finished in 0.224 seconds with exit status 0 (successful).
+ DEBUG [44265112] Running [ -L /home/deployer/apps/toy_app/releases/20180115020729/log ] as root@35.197.136.5
+ DEBUG [44265112] Command: [ -L /home/deployer/apps/toy_app/releases/20180115020729/log ]
+ DEBUG [44265112] Finished in 0.229 seconds with exit status 1 (failed).
+ DEBUG [e84fd9e0] Running [ -d /home/deployer/apps/toy_app/releases/20180115020729/log ] as root@35.197.136.5
+ DEBUG [e84fd9e0] Command: [ -d /home/deployer/apps/toy_app/releases/20180115020729/log ]
+ DEBUG [e84fd9e0] Finished in 0.229 seconds with exit status 0 (successful).
+  INFO [c2f9c5ea] Running /usr/bin/env rm -rf /home/deployer/apps/toy_app/releases/20180115020729/log as root@35.197.136.5
+ DEBUG [c2f9c5ea] Command: /usr/bin/env rm -rf /home/deployer/apps/toy_app/releases/20180115020729/log
+  INFO [c2f9c5ea] Finished in 0.259 seconds with exit status 0 (successful).
+  INFO [036297a2] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/log /home/deployer/apps/toy_app/releases/20180115020729/log as root@35.197.136.5
+ DEBUG [036297a2] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/log /home/deployer/apps/toy_app/releases/20180115020729/log
+  INFO [036297a2] Finished in 0.238 seconds with exit status 0 (successful).
+ DEBUG [fd95d97e] Running [ -L /home/deployer/apps/toy_app/releases/20180115020729/tmp/pids ] as root@35.197.136.5
+ DEBUG [fd95d97e] Command: [ -L /home/deployer/apps/toy_app/releases/20180115020729/tmp/pids ]
+ DEBUG [fd95d97e] Finished in 0.230 seconds with exit status 1 (failed).
+ DEBUG [01923542] Running [ -d /home/deployer/apps/toy_app/releases/20180115020729/tmp/pids ] as root@35.197.136.5
+ DEBUG [01923542] Command: [ -d /home/deployer/apps/toy_app/releases/20180115020729/tmp/pids ]
+ DEBUG [01923542] Finished in 0.228 seconds with exit status 1 (failed).
+  INFO [e4486af5] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/tmp/pids /home/deployer/apps/toy_app/releases/20180115020729/tmp/pids as root@35.197.136.5
+ DEBUG [e4486af5] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/tmp/pids /home/deployer/apps/toy_app/releases/20180115020729/tmp/pids
+  INFO [e4486af5] Finished in 0.250 seconds with exit status 0 (successful).
+ DEBUG [16caf679] Running [ -L /home/deployer/apps/toy_app/releases/20180115020729/tmp/cache ] as root@35.197.136.5
+ DEBUG [16caf679] Command: [ -L /home/deployer/apps/toy_app/releases/20180115020729/tmp/cache ]
+ DEBUG [16caf679] Finished in 0.238 seconds with exit status 1 (failed).
+ DEBUG [07f5587b] Running [ -d /home/deployer/apps/toy_app/releases/20180115020729/tmp/cache ] as root@35.197.136.5
+ DEBUG [07f5587b] Command: [ -d /home/deployer/apps/toy_app/releases/20180115020729/tmp/cache ]
+ DEBUG [07f5587b] Finished in 0.233 seconds with exit status 1 (failed).
+  INFO [3b0131eb] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/tmp/cache /home/deployer/apps/toy_app/releases/20180115020729/tmp/cache as root@35.197.136.5
+ DEBUG [3b0131eb] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/tmp/cache /home/deployer/apps/toy_app/releases/20180115020729/tmp/cache
+  INFO [3b0131eb] Finished in 0.235 seconds with exit status 0 (successful).
+ DEBUG [8881e7d2] Running [ -L /home/deployer/apps/toy_app/releases/20180115020729/tmp/sockets ] as root@35.197.136.5
+ DEBUG [8881e7d2] Command: [ -L /home/deployer/apps/toy_app/releases/20180115020729/tmp/sockets ]
+ DEBUG [8881e7d2] Finished in 0.239 seconds with exit status 1 (failed).
+ DEBUG [b17b56a8] Running [ -d /home/deployer/apps/toy_app/releases/20180115020729/tmp/sockets ] as root@35.197.136.5
+ DEBUG [b17b56a8] Command: [ -d /home/deployer/apps/toy_app/releases/20180115020729/tmp/sockets ]
+ DEBUG [b17b56a8] Finished in 0.231 seconds with exit status 1 (failed).
+  INFO [0151d6e6] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/tmp/sockets /home/deployer/apps/toy_app/releases/20180115020729/tmp/sockets as root@35.197.136.5
+ DEBUG [0151d6e6] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/tmp/sockets /home/deployer/apps/toy_app/releases/20180115020729/tmp/sockets
+  INFO [0151d6e6] Finished in 0.228 seconds with exit status 0 (successful).
+ DEBUG [95f1c0d6] Running [ -L /home/deployer/apps/toy_app/releases/20180115020729/vendor/bundle ] as root@35.197.136.5
+ DEBUG [95f1c0d6] Command: [ -L /home/deployer/apps/toy_app/releases/20180115020729/vendor/bundle ]
+ DEBUG [95f1c0d6] Finished in 0.239 seconds with exit status 1 (failed).
+ DEBUG [0f284813] Running [ -d /home/deployer/apps/toy_app/releases/20180115020729/vendor/bundle ] as root@35.197.136.5
+ DEBUG [0f284813] Command: [ -d /home/deployer/apps/toy_app/releases/20180115020729/vendor/bundle ]
+ DEBUG [0f284813] Finished in 0.248 seconds with exit status 1 (failed).
+  INFO [2522e428] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/vendor/bundle /home/deployer/apps/toy_app/releases/20180115020729/vendor/bundle as root@35.197.136.5
+ DEBUG [2522e428] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/vendor/bundle /home/deployer/apps/toy_app/releases/20180115020729/vendor/bundle
+  INFO [2522e428] Finished in 0.239 seconds with exit status 0 (successful).
+ DEBUG [e717bc2d] Running [ -L /home/deployer/apps/toy_app/releases/20180115020729/public/system ] as root@35.197.136.5
+ DEBUG [e717bc2d] Command: [ -L /home/deployer/apps/toy_app/releases/20180115020729/public/system ]
+ DEBUG [e717bc2d] Finished in 0.239 seconds with exit status 1 (failed).
+ DEBUG [192bf4c9] Running [ -d /home/deployer/apps/toy_app/releases/20180115020729/public/system ] as root@35.197.136.5
+ DEBUG [192bf4c9] Command: [ -d /home/deployer/apps/toy_app/releases/20180115020729/public/system ]
+ DEBUG [192bf4c9] Finished in 0.239 seconds with exit status 1 (failed).
+  INFO [a8680a9d] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/public/system /home/deployer/apps/toy_app/releases/20180115020729/public/system as root@35.197.136.5
+ DEBUG [a8680a9d] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/public/system /home/deployer/apps/toy_app/releases/20180115020729/public/system
+  INFO [a8680a9d] Finished in 0.229 seconds with exit status 0 (successful).
+ DEBUG [0f38ab50] Running [ -L /home/deployer/apps/toy_app/releases/20180115020729/public/uploads ] as root@35.197.136.5
+ DEBUG [0f38ab50] Command: [ -L /home/deployer/apps/toy_app/releases/20180115020729/public/uploads ]
+ DEBUG [0f38ab50] Finished in 0.229 seconds with exit status 1 (failed).
+ DEBUG [bd1fb564] Running [ -d /home/deployer/apps/toy_app/releases/20180115020729/public/uploads ] as root@35.197.136.5
+ DEBUG [bd1fb564] Command: [ -d /home/deployer/apps/toy_app/releases/20180115020729/public/uploads ]
+ DEBUG [bd1fb564] Finished in 0.259 seconds with exit status 1 (failed).
+  INFO [223e6095] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/public/uploads /home/deployer/apps/toy_app/releases/20180115020729/public/uploads as root@35.197.136.5
+ DEBUG [223e6095] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/public/uploads /home/deployer/apps/toy_app/releases/20180115020729/public/uploads
+  INFO [223e6095] Finished in 0.239 seconds with exit status 0 (successful).
+ DEBUG [63679114] Running [ -L /home/deployer/apps/toy_app/releases/20180115020729/public/assets ] as root@35.197.136.5
+ DEBUG [63679114] Command: [ -L /home/deployer/apps/toy_app/releases/20180115020729/public/assets ]
+ DEBUG [63679114] Finished in 0.239 seconds with exit status 1 (failed).
+ DEBUG [7cab5e2b] Running [ -d /home/deployer/apps/toy_app/releases/20180115020729/public/assets ] as root@35.197.136.5
+ DEBUG [7cab5e2b] Command: [ -d /home/deployer/apps/toy_app/releases/20180115020729/public/assets ]
+ DEBUG [7cab5e2b] Finished in 0.239 seconds with exit status 1 (failed).
+  INFO [d296eeff] Running /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/public/assets /home/deployer/apps/toy_app/releases/20180115020729/public/assets as root@35.197.136.5
+ DEBUG [d296eeff] Command: /usr/bin/env ln -s /home/deployer/apps/toy_app/shared/public/assets /home/deployer/apps/toy_app/releases/20180115020729/public/assets
+  INFO [d296eeff] Finished in 0.237 seconds with exit status 0 (successful).
+ DEBUG [56b2d890] Running if test ! -d /home/deployer/apps/toy_app/releases/20180115020729; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180115020729'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [56b2d890] Command: if test ! -d /home/deployer/apps/toy_app/releases/20180115020729; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180115020729'" 1>&2; false; fi
+ DEBUG [56b2d890] Finished in 0.239 seconds with exit status 0 (successful).
+ DEBUG [c9e24c7b] Running /usr/local/rvm/bin/rvm 2.5.0 do bundle check --path /home/deployer/apps/toy_app/shared/bundle as root@35.197.136.5
+ DEBUG [c9e24c7b] Command: cd /home/deployer/apps/toy_app/releases/20180115020729 && /usr/local/rvm/bin/rvm 2.5.0 do bundle check --path /home/deployer/apps/toy_app/shared/bundle
+ DEBUG [c9e24c7b] 	[31mhttps://github.com/seuros/capistrano-puma.git (at master@81647bc) is not yet
+ DEBUG [c9e24c7b] 	
+ DEBUG [c9e24c7b] 	checked out. Run `bundle install` first.[0m
+ DEBUG [c9e24c7b] 	
+ DEBUG [c9e24c7b] Finished in 0.769 seconds with exit status 11 (failed).
+  INFO [84906111] Running /usr/local/rvm/bin/rvm 2.5.0 do bundle install --path /home/deployer/apps/toy_app/shared/bundle --without development test --deployment --quiet as root@35.197.136.5
+ DEBUG [84906111] Command: cd /home/deployer/apps/toy_app/releases/20180115020729 && /usr/local/rvm/bin/rvm 2.5.0 do bundle install --path /home/deployer/apps/toy_app/shared/bundle --without development test --deployment --quiet
+  INFO [84906111] Finished in 83.502 seconds with exit status 0 (successful).
+ DEBUG [d1943387] Running if test ! -d /home/deployer/apps/toy_app/releases/20180115020729; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180115020729'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [d1943387] Command: if test ! -d /home/deployer/apps/toy_app/releases/20180115020729; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180115020729'" 1>&2; false; fi
+ DEBUG [d1943387] Finished in 0.380 seconds with exit status 0 (successful).
+  INFO [c3dfb074] Running /usr/local/rvm/bin/rvm 2.5.0 do bundle exec rake assets:precompile as root@35.197.136.5
+ DEBUG [c3dfb074] Command: cd /home/deployer/apps/toy_app/releases/20180115020729 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; /usr/local/rvm/bin/rvm 2.5.0 do bundle exec rake assets:precompile )
+ DEBUG [c3dfb074] 	Yarn executable was not detected in the system.
+ DEBUG [c3dfb074] 	
+ DEBUG [c3dfb074] 	Download Yarn at https://yarnpkg.com/en/docs/install
+ DEBUG [c3dfb074] 	
+ DEBUG [c3dfb074] 	I, [2018-01-15T02:09:15.324366 #13507]  INFO -- : Writing /home/deployer/apps/toy_app/releases/20180115020729/public/assets/application-26a8755e392a8d28e32ceedbb83ef4d7c72c899883dfbf73e6a7a16ac2d44584.js
+ DEBUG [c3dfb074] 	
+ DEBUG [c3dfb074] 	I, [2018-01-15T02:09:15.326390 #13507]  INFO -- : Writing /home/deployer/apps/toy_app/releases/20180115020729/public/assets/application-26a8755e392a8d28e32ceedbb83ef4d7c72c899883dfbf73e6a7a16ac2d44584.js.gz
+ DEBUG [c3dfb074] 	
+ DEBUG [c3dfb074] 	I, [2018-01-15T02:09:15.330260 #13507]  INFO -- : Writing /home/deployer/apps/toy_app/releases/20180115020729/public/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css
+ DEBUG [c3dfb074] 	
+ DEBUG [c3dfb074] 	I, [2018-01-15T02:09:15.334967 #13507]  INFO -- : Writing /home/deployer/apps/toy_app/releases/20180115020729/public/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css.gz
+ DEBUG [c3dfb074] 	
+  INFO [c3dfb074] Finished in 3.718 seconds with exit status 0 (successful).
+ DEBUG [5921b084] Running if test ! -d /home/deployer/apps/toy_app/releases/20180115020729; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180115020729'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [5921b084] Command: if test ! -d /home/deployer/apps/toy_app/releases/20180115020729; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180115020729'" 1>&2; false; fi
+ DEBUG [5921b084] Finished in 0.318 seconds with exit status 0 (successful).
+  INFO [b5e0ed49] Running /usr/bin/env mkdir -p /home/deployer/apps/toy_app/releases/20180115020729/assets_manifest_backup as root@35.197.136.5
+ DEBUG [b5e0ed49] Command: cd /home/deployer/apps/toy_app/releases/20180115020729 && /usr/bin/env mkdir -p /home/deployer/apps/toy_app/releases/20180115020729/assets_manifest_backup
+  INFO [b5e0ed49] Finished in 0.260 seconds with exit status 0 (successful).
+ DEBUG [031cf38b] Running /usr/bin/env ls /home/deployer/apps/toy_app/releases/20180115020729/public/assets/.sprockets-manifest* as root@35.197.136.5
+ DEBUG [031cf38b] Command: cd /home/deployer/apps/toy_app/releases/20180115020729 && /usr/bin/env ls /home/deployer/apps/toy_app/releases/20180115020729/public/assets/.sprockets-manifest*
+ DEBUG [031cf38b] 	/home/deployer/apps/toy_app/releases/20180115020729/public/assets/.sprockets-manifest-e98b10aaf33f3a73ec7ced760651feab.json
+ DEBUG [031cf38b] 	
+ DEBUG [031cf38b] Finished in 0.270 seconds with exit status 0 (successful).
+ DEBUG [fc4b0c15] Running /usr/bin/env ls /home/deployer/apps/toy_app/releases/20180115020729/public/assets/.sprockets-manifest* as root@35.197.136.5
+ DEBUG [fc4b0c15] Command: cd /home/deployer/apps/toy_app/releases/20180115020729 && /usr/bin/env ls /home/deployer/apps/toy_app/releases/20180115020729/public/assets/.sprockets-manifest*
+ DEBUG [fc4b0c15] 	/home/deployer/apps/toy_app/releases/20180115020729/public/assets/.sprockets-manifest-e98b10aaf33f3a73ec7ced760651feab.json
+ DEBUG [fc4b0c15] 	
+ DEBUG [fc4b0c15] Finished in 0.300 seconds with exit status 0 (successful).
+  INFO [8c823520] Running /usr/bin/env cp /home/deployer/apps/toy_app/releases/20180115020729/public/assets/.sprockets-manifest-e98b10aaf33f3a73ec7ced760651feab.json /home/deployer/apps/toy_app/releases/20180115020729/assets_manifest_backup as root@35.197.136.5
+ DEBUG [8c823520] Command: cd /home/deployer/apps/toy_app/releases/20180115020729 && /usr/bin/env cp /home/deployer/apps/toy_app/releases/20180115020729/public/assets/.sprockets-manifest-e98b10aaf33f3a73ec7ced760651feab.json /home/deployer/apps/toy_app/releases/20180115020729/assets_manifest_backup
+  INFO [8c823520] Finished in 0.255 seconds with exit status 0 (successful).
+  INFO [deploy:db:create] Run `rake db:create`
+ DEBUG [033ab64e] Running if test ! -d /home/deployer/apps/toy_app/releases/20180115020729; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180115020729'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [033ab64e] Command: if test ! -d /home/deployer/apps/toy_app/releases/20180115020729; then echo "Directory does not exist '/home/deployer/apps/toy_app/releases/20180115020729'" 1>&2; false; fi
+ DEBUG [033ab64e] Finished in 0.236 seconds with exit status 0 (successful).
+  INFO [0c3d3bd1] Running /usr/local/rvm/bin/rvm 2.5.0 do bundle exec rake db:create as root@35.197.136.5
+ DEBUG [0c3d3bd1] Command: cd /home/deployer/apps/toy_app/releases/20180115020729 && ( export RAILS_ENV="production" ; /usr/local/rvm/bin/rvm 2.5.0 do bundle exec rake db:create )
+ DEBUG [0c3d3bd1] 	PG::InsufficientPrivilege: ERROR:  permission denied to create database
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	: CREATE DATABASE "toy_app" ENCODING = 'unicode'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	Couldn't create database for {"database"=>"toy_app", "adapter"=>"postgresql", "username"=>"root", "password"=>"toor", "host"=>"localhost", "encoding"=>"unicode", "port"=>5432, "pool"=>5}
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	rake aborted!
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	ActiveRecord::StatementInvalid: PG::InsufficientPrivilege: ERROR:  permission denied to create database
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	: CREATE DATABASE "toy_app" ENCODING = 'unicode'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `async_exec'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `block (2 levels) in execute'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:46:in `block in permit_concurrent_loads'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/concurrency/share_lock.rb:185:in `yield_shares'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:45:in `permit_concurrent_loads'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:72:in `block in execute'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:612:in `block (2 levels) in log'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:611:in `block in log'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:603:in `log'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:71:in `execute'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/schema_statements.rb:46:in `create_database'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/p
+ DEBUG [0c3d3bd1] 	ostgresql_database_tasks.rb:19:in `create'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:117:in `create'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:137:in `block in create_current'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:304:in `block in each_current_configuration'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:303:in `each'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:303:in `each_current_configuration'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:136:in `create_current'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/railties/databases.rake:27:in `block (2 levels) in <top (required)>'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli/exec.rb:75:in `load'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli/exec.rb:75:in `kernel_load'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli.rb:424:in `exec'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/t
+ DEBUG [0c3d3bd1] 	hor/base.rb:466:in `start'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli.rb:18:in `start'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/exe/bundle:30:in `block in <top (required)>'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/friendly_errors.rb:122:in `with_friendly_errors'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/exe/bundle:22:in `<top (required)>'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/bin/bundle:23:in `load'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/bin/bundle:23:in `<main>'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/bin/ruby_executable_hooks:15:in `eval'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	Caused by:
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	PG::InsufficientPrivilege: ERROR:  permission denied to create database
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `async_exec'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `block (2 levels) in execute'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:46:in `block in permit_concurrent_loads'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/concurrency/share_lock.rb:185:in `yield_shares'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:45:in `permit_concurrent_loads'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:72:in `block in execute'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:612:in `block (2 levels) in log'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:611:in `block in log'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:603:in `log'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:71:in `execute'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/schema_statements.rb:46:in `create_database'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/p
+ DEBUG [0c3d3bd1] 	ostgresql_database_tasks.rb:19:in `create'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:117:in `create'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:137:in `block in create_current'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:304:in `block in each_current_configuration'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:303:in `each'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:303:in `each_current_configuration'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:136:in `create_current'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/railties/databases.rake:27:in `block (2 levels) in <top (required)>'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/home/deployer/apps/toy_app/shared/bundle/ruby/2.5.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli/exec.rb:75:in `load'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli/exec.rb:75:in `kernel_load'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli.rb:424:in `exec'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/t
+ DEBUG [0c3d3bd1] 	hor/base.rb:466:in `start'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli.rb:18:in `start'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/exe/bundle:30:in `block in <top (required)>'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/friendly_errors.rb:122:in `with_friendly_errors'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/exe/bundle:22:in `<top (required)>'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/bin/bundle:23:in `load'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/bin/bundle:23:in `<main>'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/bin/ruby_executable_hooks:15:in `eval'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	/usr/local/rvm/gems/ruby-2.5.0/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	Tasks: TOP => db:create
+ DEBUG [0c3d3bd1] 	
+ DEBUG [0c3d3bd1] 	(See full trace by running task with --trace)
+ DEBUG [0c3d3bd1] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-01-15 10:10:48 +0800 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [305f2394] Running [ -d ~/.rvm ] as root@35.197.136.5
+ DEBUG [305f2394] Command: [ -d ~/.rvm ]
+ DEBUG [305f2394] Finished in 2.584 seconds with exit status 1 (failed).
+ DEBUG [6210af37] Running [ -d /usr/local/rvm ] as root@35.197.136.5
+ DEBUG [6210af37] Command: [ -d /usr/local/rvm ]
+ DEBUG [6210af37] Finished in 0.280 seconds with exit status 0 (successful).
+ DEBUG [9b4f682c] Running /usr/local/rvm/bin/rvm version as root@35.197.136.5
+ DEBUG [9b4f682c] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [9b4f682c] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [9b4f682c] 	
+ DEBUG [9b4f682c] Finished in 0.426 seconds with exit status 0 (successful).
+ DEBUG [d22b8897] Running /usr/local/rvm/bin/rvm current as root@35.197.136.5
+ DEBUG [d22b8897] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [d22b8897] 	ruby-2.5.0
+ DEBUG [d22b8897] 	
+ DEBUG [d22b8897] Finished in 0.431 seconds with exit status 0 (successful).
+ DEBUG [787a41aa] Running /usr/local/rvm/bin/rvm 2.5.0 do ruby --version as root@35.197.136.5
+ DEBUG [787a41aa] Command: /usr/local/rvm/bin/rvm 2.5.0 do ruby --version
+ DEBUG [787a41aa] 	ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-linux]
+ DEBUG [787a41aa] 	
+ DEBUG [787a41aa] Finished in 0.555 seconds with exit status 0 (successful).
+  INFO [8cb5ce07] Running /usr/bin/env mkdir -p /tmp as root@35.197.136.5
+ DEBUG [8cb5ce07] Command: /usr/bin/env mkdir -p /tmp
+  INFO [8cb5ce07] Finished in 0.308 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-toy_app-production-mat.sh 0.0%
+  INFO Uploading /tmp/git-ssh-toy_app-production-mat.sh 100.0%
+  INFO [7e3ece46] Running /usr/bin/env chmod 700 /tmp/git-ssh-toy_app-production-mat.sh as root@35.197.136.5
+ DEBUG [7e3ece46] Command: /usr/bin/env chmod 700 /tmp/git-ssh-toy_app-production-mat.sh
+  INFO [7e3ece46] Finished in 0.260 seconds with exit status 0 (successful).
+  INFO [9d5c484f] Running /usr/bin/env git ls-remote git@github.com:mohd-adib/toy_app.git HEAD as root@35.197.136.5
+ DEBUG [9d5c484f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env git ls-remote git@github.com:mohd-adib/toy_app.git HEAD )
+ DEBUG [9d5c484f] 	404009f78a34412ad0f971cfba874e875b5ca4d1
+ DEBUG [9d5c484f] 		
+ DEBUG [9d5c484f] 	HEAD
+  INFO [9d5c484f] Finished in 2.369 seconds with exit status 0 (successful).
+  INFO [f9123af5] Running /usr/bin/env mkdir -p /root/apps/toy_app/shared /root/apps/toy_app/releases as root@35.197.136.5
+ DEBUG [f9123af5] Command: /usr/bin/env mkdir -p /root/apps/toy_app/shared /root/apps/toy_app/releases
+  INFO [f9123af5] Finished in 0.294 seconds with exit status 0 (successful).
+  INFO [e664ce23] Running /usr/bin/env mkdir -p /root/apps/toy_app/shared/log /root/apps/toy_app/shared/tmp/pids /root/apps/toy_app/shared/tmp/cache /root/apps/toy_app/shared/tmp/sockets /root/apps/toy_app/shared/vendor/bundle /root/apps/toy_app/shared/public/system /root/apps/toy_app/shared/public/uploads /root/apps/toy_app/shared/public/assets as root@35.197.136.5
+ DEBUG [e664ce23] Command: /usr/bin/env mkdir -p /root/apps/toy_app/shared/log /root/apps/toy_app/shared/tmp/pids /root/apps/toy_app/shared/tmp/cache /root/apps/toy_app/shared/tmp/sockets /root/apps/toy_app/shared/vendor/bundle /root/apps/toy_app/shared/public/system /root/apps/toy_app/shared/public/uploads /root/apps/toy_app/shared/public/assets
+  INFO [e664ce23] Finished in 0.303 seconds with exit status 0 (successful).
+  INFO [1f8c4b20] Running /usr/bin/env mkdir -p /root/apps/toy_app/shared/config as root@35.197.136.5
+ DEBUG [1f8c4b20] Command: /usr/bin/env mkdir -p /root/apps/toy_app/shared/config
+  INFO [1f8c4b20] Finished in 0.277 seconds with exit status 0 (successful).
+ DEBUG [b210ce64] Running if test ! -d /root/apps/toy_app/shared; then echo "Directory does not exist '/root/apps/toy_app/shared'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [b210ce64] Command: if test ! -d /root/apps/toy_app/shared; then echo "Directory does not exist '/root/apps/toy_app/shared'" 1>&2; false; fi
+ DEBUG [b210ce64] Finished in 0.278 seconds with exit status 0 (successful).
+  INFO Uploading config ./config/database.production.yml as config/database.yml
+ DEBUG Uploading /root/apps/toy_app/shared/config/database.yml 0.0%
+  INFO Uploading /root/apps/toy_app/shared/config/database.yml 100.0%
+  INFO Uploading config ./config/secrets.production.yml as config/secrets.yml
+ DEBUG Uploading /root/apps/toy_app/shared/config/secrets.yml 0.0%
+  INFO Uploading /root/apps/toy_app/shared/config/secrets.yml 100.0%
+ DEBUG Uploading /root/apps/toy_app/shared/config/puma.rb 0.0%
+  INFO Uploading /root/apps/toy_app/shared/config/puma.rb 100.0%
+ DEBUG Uploading /tmp/nginx_toy_app_production 0.0%
+  INFO Uploading /tmp/nginx_toy_app_production 100.0%
+  INFO [4d9c09ce] Running /usr/bin/env sudo mv /tmp/nginx_toy_app_production /etc/nginx/sites-available/toy_app_production as root@35.197.136.5
+ DEBUG [4d9c09ce] Command: /usr/bin/env sudo mv /tmp/nginx_toy_app_production /etc/nginx/sites-available/toy_app_production
+  INFO [4d9c09ce] Finished in 0.280 seconds with exit status 0 (successful).
+  INFO [552a8c61] Running /usr/bin/env sudo ln -fs /etc/nginx/sites-available/toy_app_production /etc/nginx/sites-enabled/toy_app_production as root@35.197.136.5
+ DEBUG [552a8c61] Command: /usr/bin/env sudo ln -fs /etc/nginx/sites-available/toy_app_production /etc/nginx/sites-enabled/toy_app_production
+  INFO [552a8c61] Finished in 0.255 seconds with exit status 0 (successful).
+ DEBUG [e5e34e99] Running [ -f /root/apps/toy_app/shared/config/database.yml ] as root@35.197.136.5
+ DEBUG [e5e34e99] Command: [ -f /root/apps/toy_app/shared/config/database.yml ]
+ DEBUG [e5e34e99] Finished in 0.260 seconds with exit status 0 (successful).
+ DEBUG [c8a3398c] Running [ -f /root/apps/toy_app/shared/config/secrets.yml ] as root@35.197.136.5
+ DEBUG [c8a3398c] Command: [ -f /root/apps/toy_app/shared/config/secrets.yml ]
+ DEBUG [c8a3398c] Finished in 0.259 seconds with exit status 0 (successful).
+ DEBUG [2dec2ee7] Running [ -f /root/apps/toy_app/shared/config/puma.rb ] as root@35.197.136.5
+ DEBUG [2dec2ee7] Command: [ -f /root/apps/toy_app/shared/config/puma.rb ]
+ DEBUG [2dec2ee7] Finished in 0.260 seconds with exit status 0 (successful).
+ DEBUG [54b03c61] Running [ -f /root/apps/toy_app/shared/config/puma.rb ] as root@35.197.136.5
+ DEBUG [54b03c61] Command: [ -f /root/apps/toy_app/shared/config/puma.rb ]
+ DEBUG [54b03c61] Finished in 0.268 seconds with exit status 0 (successful).
+ DEBUG [eb9e9df2] Running [ -f /root/apps/toy_app/current/REVISION ] as root@35.197.136.5
+ DEBUG [eb9e9df2] Command: [ -f /root/apps/toy_app/current/REVISION ]
+ DEBUG [eb9e9df2] Finished in 0.259 seconds with exit status 1 (failed).
+ DEBUG [036d4a5a] Running [ -f /root/apps/toy_app/repo/HEAD ] as root@35.197.136.5
+ DEBUG [036d4a5a] Command: [ -f /root/apps/toy_app/repo/HEAD ]
+ DEBUG [036d4a5a] Finished in 0.247 seconds with exit status 1 (failed).
+ DEBUG [d6be9e65] Running if test ! -d /root/apps/toy_app; then echo "Directory does not exist '/root/apps/toy_app'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [d6be9e65] Command: if test ! -d /root/apps/toy_app; then echo "Directory does not exist '/root/apps/toy_app'" 1>&2; false; fi
+ DEBUG [d6be9e65] Finished in 0.268 seconds with exit status 0 (successful).
+  INFO [04dad0b7] Running /usr/bin/env git clone --mirror git@github.com:mohd-adib/toy_app.git /root/apps/toy_app/repo as root@35.197.136.5
+ DEBUG [04dad0b7] Command: cd /root/apps/toy_app && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env git clone --mirror git@github.com:mohd-adib/toy_app.git /root/apps/toy_app/repo )
+ DEBUG [04dad0b7] 	Cloning into bare repository '/root/apps/toy_app/repo'...
+ DEBUG [04dad0b7] 	
+ DEBUG [04dad0b7] 	remote: Counting objects: 232, done.[K
+ DEBUG [04dad0b7] 	
+ DEBUG [04dad0b7] 	remote: Compressing objects:   0% (1/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:   1% (2/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:   2% (4/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:   3% (5/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objec
+ DEBUG [04dad0b7] 	ts:   4% (7/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:   5% (8/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:   6% (10/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:   7% (11/155
+ DEBUG [04dad0b7] 	)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:   8% (13/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:   9% (14/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  10% (16/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  11% (18/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  12% (19/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  13% (21/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  14% (22/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  15% (24/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  16% (25/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  17% (27/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  18% (28/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  19% (30/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  20% (31/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  21% (33/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  22% (35/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  23% (36/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  24% (38/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  25% (39/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  26% (41/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  27% (42/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  28% (44/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  29% (45/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  30% (47/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  31% (49/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  32% (50/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  33% (52/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  34% (53/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  35% (55/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  36% (56/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  37% (58/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  38% (59/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  39% (61/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  40% (62/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  41% (64/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  42% (66/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  43% (67/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  44% (69/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  45% (70/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  46% (72/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  47% (73/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  48% (75/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  49% (76/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  50% (78/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  51% (80/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  52% (81/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  53% (83/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  54% (84/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  55% (86/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  56% (87/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  57% (89/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  58% (90/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  59% (92/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  60% (93/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  61% (95/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  62% (97/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  63% (98/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  64% (100/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  65% (101/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  66% (103/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  67% (104/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  68% (106/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  69% (107/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  70% (109/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  71% (111/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  72% (112/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  73% (114/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  74% (115/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  75% (117/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  76% (118/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  77% (120/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  78% (121/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  79% (123/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  80% (124/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  81% (126/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  82% (128/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  83% (129/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  84% (131/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  85% (132/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  86% (134/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  87% (135/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  88% (137/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  89% (138/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  90% (140/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  91% (142/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  92% (143/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  93% (145/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  94% (146/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  95% (148/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  96% (149/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  97% (151/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  98% (152/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects:  99% (154/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects: 100% (155/155)   [K
+ DEBUG [04dad0b7] 	remote: Compressing objects: 100% (155/155), done.[K
+ DEBUG [04dad0b7] 	
+ DEBUG [04dad0b7] 	Receiving objects:   0% (1/232)   
+ DEBUG [04dad0b7] 	Receiving objects:   1% (3/232)   
+ DEBUG [04dad0b7] 	Receiving objects:   2% (5/232)   
+ DEBUG [04dad0b7] 	Receiving objects:   3% (7/232)   
+ DEBUG [04dad0b7] 	Receiving objects:   4% (10/232)   
+ DEBUG [04dad0b7] 	Receiving objects:   5% (12/232)   
+ DEBUG [04dad0b7] 	Receiving objects:   6% (14/232)   
+ DEBUG [04dad0b7] 	Receiving objects:   7% (17/232)   
+ DEBUG [04dad0b7] 	Receiving objects:   8% (19/232)   
+ DEBUG [04dad0b7] 	Receiving objects:   9% (21/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  10% (24/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  11% (26/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  12% (28/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  13% (31/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  14% (33/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  15% (35/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  16% (38/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  17% (40/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  18% (42/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  19% (45/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  20% (47/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  21% (49/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  22% (52/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  23% (54/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  24% (56/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  25% (58/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  26% (61/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  27% (63/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  28% (65/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  29% (68/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  30% (70/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  31% (72/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  32% (75/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  33% (77/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  34% (79/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  35% (82/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  36% (84/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  37% (86/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  38% (89/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  39% (91/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  40% (93/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  41% (96/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  42% (98/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  43% (100/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  44% (103/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  45% (105/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  46% (107/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  47% (110/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  48% (112/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  49% (114/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  50% (116/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  51% (119/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  52% (121/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  53% (123/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  54% (126/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  55% (128/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  56% (130/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  57% (133/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  58% (135/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  59% (137/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  60% (140/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  61% (142/232)   
+ DEBUG [04dad0b7] 	remote: Total 232 (delta 90), reused 185 (delta 43), pack-reused 0[K
+ DEBUG [04dad0b7] 	
+ DEBUG [04dad0b7] 	Receiving objects:  62% (144/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  63% (147/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  64% (149/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  65% (151/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  66% (154/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  67% (156/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  68% (158/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  69% (161/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  70% (163/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  71% (165/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  72% (168/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  73% (170/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  74% (172/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  75% (174/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  76% (177/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  77% (179/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  78% (181/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  79% (184/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  80% (186/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  81% (188/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  82% (191/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  83% (193/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  84% (195/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  85% (198/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  86% (200/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  87% (202/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  88% (205/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  89% (207/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  90% (209/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  91% (212/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  92% (214/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  93% (216/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  94% (219/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  95% (221/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  96% (223/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  97% (226/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  98% (228/232)   
+ DEBUG [04dad0b7] 	Receiving objects:  99% (230/232)   
+ DEBUG [04dad0b7] 	Receiving objects: 100% (232/232)   
+ DEBUG [04dad0b7] 	Receiving objects: 100% (232/232), 83.07 KiB | 0 bytes/s, done.
+ DEBUG [04dad0b7] 	
+ DEBUG [04dad0b7] 	Resolving deltas:   0% (0/90)   
+ DEBUG [04dad0b7] 	Resolving deltas:  30% (27/90)   
+ DEBUG [04dad0b7] 	Resolving deltas:  31% (28/90)   
+ DEBUG [04dad0b7] 	Resolving deltas:  35% (32/90)   
+ DEBUG [04dad0b7] 	Resolving deltas:  42% (38/90)   
+ DEBUG [04dad0b7] 	Resolving deltas:  47% (43/90)   
+ DEBUG [04dad0b7] 	Resolving deltas:  66% (60/90)   
+ DEBUG [04dad0b7] 	Resolving deltas:  68% (62/90)   
+ DEBUG [04dad0b7] 	Resolving deltas:  81% (73/90)   
+ DEBUG [04dad0b7] 	Resolving deltas:  83% (75/90)   
+ DEBUG [04dad0b7] 	Resolving deltas:  84% (76/90)   
+ DEBUG [04dad0b7] 	Resolving deltas:  85% (77/90)   
+ DEBUG [04dad0b7] 	Resolving deltas:  87% (79/90)   
+ DEBUG [04dad0b7] 	Resolving deltas:  90% (81/90)   
+ DEBUG [04dad0b7] 	Resolving deltas: 100% (90/90)   
+ DEBUG [04dad0b7] 	Resolving deltas: 100% (90/90), done.
+ DEBUG [04dad0b7] 	
+ DEBUG [04dad0b7] 	Checking connectivity... 
+ DEBUG [04dad0b7] 	done.
+ DEBUG [04dad0b7] 	
+  INFO [04dad0b7] Finished in 3.013 seconds with exit status 0 (successful).
+ DEBUG [1f7b4600] Running if test ! -d /root/apps/toy_app/repo; then echo "Directory does not exist '/root/apps/toy_app/repo'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [1f7b4600] Command: if test ! -d /root/apps/toy_app/repo; then echo "Directory does not exist '/root/apps/toy_app/repo'" 1>&2; false; fi
+ DEBUG [1f7b4600] Finished in 0.234 seconds with exit status 0 (successful).
+  INFO [6f831937] Running /usr/bin/env git remote set-url origin git@github.com:mohd-adib/toy_app.git as root@35.197.136.5
+ DEBUG [6f831937] Command: cd /root/apps/toy_app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env git remote set-url origin git@github.com:mohd-adib/toy_app.git )
+  INFO [6f831937] Finished in 0.309 seconds with exit status 0 (successful).
+  INFO [18f99a11] Running /usr/bin/env git remote update --prune as root@35.197.136.5
+ DEBUG [18f99a11] Command: cd /root/apps/toy_app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [18f99a11] 	Fetching origin
+ DEBUG [18f99a11] 	
+  INFO [18f99a11] Finished in 2.409 seconds with exit status 0 (successful).
+ DEBUG [7f6cb733] Running if test ! -d /root/apps/toy_app/repo; then echo "Directory does not exist '/root/apps/toy_app/repo'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [7f6cb733] Command: if test ! -d /root/apps/toy_app/repo; then echo "Directory does not exist '/root/apps/toy_app/repo'" 1>&2; false; fi
+ DEBUG [7f6cb733] Finished in 0.287 seconds with exit status 0 (successful).
+  INFO [5362496b] Running /usr/bin/env mkdir -p /root/apps/toy_app/releases/20180115021101 as root@35.197.136.5
+ DEBUG [5362496b] Command: cd /root/apps/toy_app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env mkdir -p /root/apps/toy_app/releases/20180115021101 )
+  INFO [5362496b] Finished in 0.309 seconds with exit status 0 (successful).
+  INFO [c890c021] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /root/apps/toy_app/releases/20180115021101 as root@35.197.136.5
+ DEBUG [c890c021] Command: cd /root/apps/toy_app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /root/apps/toy_app/releases/20180115021101 )
+  INFO [c890c021] Finished in 0.292 seconds with exit status 0 (successful).
+ DEBUG [a8658044] Running if test ! -d /root/apps/toy_app/repo; then echo "Directory does not exist '/root/apps/toy_app/repo'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [a8658044] Command: if test ! -d /root/apps/toy_app/repo; then echo "Directory does not exist '/root/apps/toy_app/repo'" 1>&2; false; fi
+ DEBUG [a8658044] Finished in 0.285 seconds with exit status 0 (successful).
+ DEBUG [f8d114a9] Running /usr/bin/env git rev-list --max-count=1 master as root@35.197.136.5
+ DEBUG [f8d114a9] Command: cd /root/apps/toy_app/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-toy_app-production-mat.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [f8d114a9] 	404009f78a34412ad0f971cfba874e875b5ca4d1
+ DEBUG [f8d114a9] 	
+ DEBUG [f8d114a9] Finished in 0.280 seconds with exit status 0 (successful).
+ DEBUG [b7e97b00] Running if test ! -d /root/apps/toy_app/releases/20180115021101; then echo "Directory does not exist '/root/apps/toy_app/releases/20180115021101'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [b7e97b00] Command: if test ! -d /root/apps/toy_app/releases/20180115021101; then echo "Directory does not exist '/root/apps/toy_app/releases/20180115021101'" 1>&2; false; fi
+ DEBUG [b7e97b00] Finished in 0.287 seconds with exit status 0 (successful).
+  INFO [1d6abefa] Running /usr/bin/env echo "404009f78a34412ad0f971cfba874e875b5ca4d1" >> REVISION as root@35.197.136.5
+ DEBUG [1d6abefa] Command: cd /root/apps/toy_app/releases/20180115021101 && /usr/bin/env echo "404009f78a34412ad0f971cfba874e875b5ca4d1" >> REVISION
+  INFO [1d6abefa] Finished in 0.289 seconds with exit status 0 (successful).
+  INFO [f4111206] Running /usr/bin/env mkdir -p /root/apps/toy_app/releases/20180115021101/config as root@35.197.136.5
+ DEBUG [f4111206] Command: /usr/bin/env mkdir -p /root/apps/toy_app/releases/20180115021101/config
+  INFO [f4111206] Finished in 0.276 seconds with exit status 0 (successful).
+ DEBUG [8f8c2d9b] Running [ -L /root/apps/toy_app/releases/20180115021101/config/database.yml ] as root@35.197.136.5
+ DEBUG [8f8c2d9b] Command: [ -L /root/apps/toy_app/releases/20180115021101/config/database.yml ]
+ DEBUG [8f8c2d9b] Finished in 0.291 seconds with exit status 1 (failed).
+ DEBUG [c2f734ff] Running [ -f /root/apps/toy_app/releases/20180115021101/config/database.yml ] as root@35.197.136.5
+ DEBUG [c2f734ff] Command: [ -f /root/apps/toy_app/releases/20180115021101/config/database.yml ]
+ DEBUG [c2f734ff] Finished in 0.289 seconds with exit status 0 (successful).
+  INFO [534bac22] Running /usr/bin/env rm /root/apps/toy_app/releases/20180115021101/config/database.yml as root@35.197.136.5
+ DEBUG [534bac22] Command: /usr/bin/env rm /root/apps/toy_app/releases/20180115021101/config/database.yml
+  INFO [534bac22] Finished in 0.300 seconds with exit status 0 (successful).
+  INFO [9ea866af] Running /usr/bin/env ln -s /root/apps/toy_app/shared/config/database.yml /root/apps/toy_app/releases/20180115021101/config/database.yml as root@35.197.136.5
+ DEBUG [9ea866af] Command: /usr/bin/env ln -s /root/apps/toy_app/shared/config/database.yml /root/apps/toy_app/releases/20180115021101/config/database.yml
+  INFO [9ea866af] Finished in 0.278 seconds with exit status 0 (successful).
+ DEBUG [ff79aa05] Running [ -L /root/apps/toy_app/releases/20180115021101/config/secrets.yml ] as root@35.197.136.5
+ DEBUG [ff79aa05] Command: [ -L /root/apps/toy_app/releases/20180115021101/config/secrets.yml ]
+ DEBUG [ff79aa05] Finished in 0.298 seconds with exit status 1 (failed).
+ DEBUG [3446b2a0] Running [ -f /root/apps/toy_app/releases/20180115021101/config/secrets.yml ] as root@35.197.136.5
+ DEBUG [3446b2a0] Command: [ -f /root/apps/toy_app/releases/20180115021101/config/secrets.yml ]
+ DEBUG [3446b2a0] Finished in 0.299 seconds with exit status 0 (successful).
+  INFO [78897a62] Running /usr/bin/env rm /root/apps/toy_app/releases/20180115021101/config/secrets.yml as root@35.197.136.5
+ DEBUG [78897a62] Command: /usr/bin/env rm /root/apps/toy_app/releases/20180115021101/config/secrets.yml
+  INFO [78897a62] Finished in 0.280 seconds with exit status 0 (successful).
+  INFO [59b9cc97] Running /usr/bin/env ln -s /root/apps/toy_app/shared/config/secrets.yml /root/apps/toy_app/releases/20180115021101/config/secrets.yml as root@35.197.136.5
+ DEBUG [59b9cc97] Command: /usr/bin/env ln -s /root/apps/toy_app/shared/config/secrets.yml /root/apps/toy_app/releases/20180115021101/config/secrets.yml
+  INFO [59b9cc97] Finished in 0.287 seconds with exit status 0 (successful).
+ DEBUG [9a8ddf14] Running [ -L /root/apps/toy_app/releases/20180115021101/config/puma.rb ] as root@35.197.136.5
+ DEBUG [9a8ddf14] Command: [ -L /root/apps/toy_app/releases/20180115021101/config/puma.rb ]
+ DEBUG [9a8ddf14] Finished in 0.259 seconds with exit status 1 (failed).
+ DEBUG [6ee4b5aa] Running [ -f /root/apps/toy_app/releases/20180115021101/config/puma.rb ] as root@35.197.136.5
+ DEBUG [6ee4b5aa] Command: [ -f /root/apps/toy_app/releases/20180115021101/config/puma.rb ]
+ DEBUG [6ee4b5aa] Finished in 0.291 seconds with exit status 0 (successful).
+  INFO [5ff174e0] Running /usr/bin/env rm /root/apps/toy_app/releases/20180115021101/config/puma.rb as root@35.197.136.5
+ DEBUG [5ff174e0] Command: /usr/bin/env rm /root/apps/toy_app/releases/20180115021101/config/puma.rb
+  INFO [5ff174e0] Finished in 0.287 seconds with exit status 0 (successful).
+  INFO [a1e7f216] Running /usr/bin/env ln -s /root/apps/toy_app/shared/config/puma.rb /root/apps/toy_app/releases/20180115021101/config/puma.rb as root@35.197.136.5
+ DEBUG [a1e7f216] Command: /usr/bin/env ln -s /root/apps/toy_app/shared/config/puma.rb /root/apps/toy_app/releases/20180115021101/config/puma.rb
+  INFO [a1e7f216] Finished in 0.339 seconds with exit status 0 (successful).
+  INFO [bf3dd186] Running /usr/bin/env mkdir -p /root/apps/toy_app/releases/20180115021101 /root/apps/toy_app/releases/20180115021101/tmp /root/apps/toy_app/releases/20180115021101/vendor /root/apps/toy_app/releases/20180115021101/public as root@35.197.136.5
+ DEBUG [bf3dd186] Command: /usr/bin/env mkdir -p /root/apps/toy_app/releases/20180115021101 /root/apps/toy_app/releases/20180115021101/tmp /root/apps/toy_app/releases/20180115021101/vendor /root/apps/toy_app/releases/20180115021101/public
+  INFO [bf3dd186] Finished in 0.288 seconds with exit status 0 (successful).
+ DEBUG [5d3500ac] Running [ -L /root/apps/toy_app/releases/20180115021101/log ] as root@35.197.136.5
+ DEBUG [5d3500ac] Command: [ -L /root/apps/toy_app/releases/20180115021101/log ]
+ DEBUG [5d3500ac] Finished in 0.288 seconds with exit status 1 (failed).
+ DEBUG [55555ff9] Running [ -d /root/apps/toy_app/releases/20180115021101/log ] as root@35.197.136.5
+ DEBUG [55555ff9] Command: [ -d /root/apps/toy_app/releases/20180115021101/log ]
+ DEBUG [55555ff9] Finished in 0.299 seconds with exit status 0 (successful).
+  INFO [c1a8f928] Running /usr/bin/env rm -rf /root/apps/toy_app/releases/20180115021101/log as root@35.197.136.5
+ DEBUG [c1a8f928] Command: /usr/bin/env rm -rf /root/apps/toy_app/releases/20180115021101/log
+  INFO [c1a8f928] Finished in 0.281 seconds with exit status 0 (successful).
+  INFO [8304976f] Running /usr/bin/env ln -s /root/apps/toy_app/shared/log /root/apps/toy_app/releases/20180115021101/log as root@35.197.136.5
+ DEBUG [8304976f] Command: /usr/bin/env ln -s /root/apps/toy_app/shared/log /root/apps/toy_app/releases/20180115021101/log
+  INFO [8304976f] Finished in 0.308 seconds with exit status 0 (successful).
+ DEBUG [1356239b] Running [ -L /root/apps/toy_app/releases/20180115021101/tmp/pids ] as root@35.197.136.5
+ DEBUG [1356239b] Command: [ -L /root/apps/toy_app/releases/20180115021101/tmp/pids ]
+ DEBUG [1356239b] Finished in 0.268 seconds with exit status 1 (failed).
+ DEBUG [9b5bf9d8] Running [ -d /root/apps/toy_app/releases/20180115021101/tmp/pids ] as root@35.197.136.5
+ DEBUG [9b5bf9d8] Command: [ -d /root/apps/toy_app/releases/20180115021101/tmp/pids ]
+ DEBUG [9b5bf9d8] Finished in 0.250 seconds with exit status 1 (failed).
+  INFO [16c75dd0] Running /usr/bin/env ln -s /root/apps/toy_app/shared/tmp/pids /root/apps/toy_app/releases/20180115021101/tmp/pids as root@35.197.136.5
+ DEBUG [16c75dd0] Command: /usr/bin/env ln -s /root/apps/toy_app/shared/tmp/pids /root/apps/toy_app/releases/20180115021101/tmp/pids
+  INFO [16c75dd0] Finished in 0.268 seconds with exit status 0 (successful).
+ DEBUG [a80e08c9] Running [ -L /root/apps/toy_app/releases/20180115021101/tmp/cache ] as root@35.197.136.5
+ DEBUG [a80e08c9] Command: [ -L /root/apps/toy_app/releases/20180115021101/tmp/cache ]
+ DEBUG [a80e08c9] Finished in 0.269 seconds with exit status 1 (failed).
+ DEBUG [09833bc5] Running [ -d /root/apps/toy_app/releases/20180115021101/tmp/cache ] as root@35.197.136.5
+ DEBUG [09833bc5] Command: [ -d /root/apps/toy_app/releases/20180115021101/tmp/cache ]
+ DEBUG [09833bc5] Finished in 0.240 seconds with exit status 1 (failed).
+  INFO [515a9339] Running /usr/bin/env ln -s /root/apps/toy_app/shared/tmp/cache /root/apps/toy_app/releases/20180115021101/tmp/cache as root@35.197.136.5
+ DEBUG [515a9339] Command: /usr/bin/env ln -s /root/apps/toy_app/shared/tmp/cache /root/apps/toy_app/releases/20180115021101/tmp/cache
+  INFO [515a9339] Finished in 0.260 seconds with exit status 0 (successful).
+ DEBUG [232d1b60] Running [ -L /root/apps/toy_app/releases/20180115021101/tmp/sockets ] as root@35.197.136.5
+ DEBUG [232d1b60] Command: [ -L /root/apps/toy_app/releases/20180115021101/tmp/sockets ]
+ DEBUG [232d1b60] Finished in 0.259 seconds with exit status 1 (failed).
+ DEBUG [ea3b81fd] Running [ -d /root/apps/toy_app/releases/20180115021101/tmp/sockets ] as root@35.197.136.5
+ DEBUG [ea3b81fd] Command: [ -d /root/apps/toy_app/releases/20180115021101/tmp/sockets ]
+ DEBUG [ea3b81fd] Finished in 0.260 seconds with exit status 1 (failed).
+  INFO [7e3e63d7] Running /usr/bin/env ln -s /root/apps/toy_app/shared/tmp/sockets /root/apps/toy_app/releases/20180115021101/tmp/sockets as root@35.197.136.5
+ DEBUG [7e3e63d7] Command: /usr/bin/env ln -s /root/apps/toy_app/shared/tmp/sockets /root/apps/toy_app/releases/20180115021101/tmp/sockets
+  INFO [7e3e63d7] Finished in 0.259 seconds with exit status 0 (successful).
+ DEBUG [33777cc8] Running [ -L /root/apps/toy_app/releases/20180115021101/vendor/bundle ] as root@35.197.136.5
+ DEBUG [33777cc8] Command: [ -L /root/apps/toy_app/releases/20180115021101/vendor/bundle ]
+ DEBUG [33777cc8] Finished in 0.269 seconds with exit status 1 (failed).
+ DEBUG [a9b848ba] Running [ -d /root/apps/toy_app/releases/20180115021101/vendor/bundle ] as root@35.197.136.5
+ DEBUG [a9b848ba] Command: [ -d /root/apps/toy_app/releases/20180115021101/vendor/bundle ]
+ DEBUG [a9b848ba] Finished in 0.269 seconds with exit status 1 (failed).
+  INFO [13bc1abe] Running /usr/bin/env ln -s /root/apps/toy_app/shared/vendor/bundle /root/apps/toy_app/releases/20180115021101/vendor/bundle as root@35.197.136.5
+ DEBUG [13bc1abe] Command: /usr/bin/env ln -s /root/apps/toy_app/shared/vendor/bundle /root/apps/toy_app/releases/20180115021101/vendor/bundle
+  INFO [13bc1abe] Finished in 0.271 seconds with exit status 0 (successful).
+ DEBUG [f6c11b6e] Running [ -L /root/apps/toy_app/releases/20180115021101/public/system ] as root@35.197.136.5
+ DEBUG [f6c11b6e] Command: [ -L /root/apps/toy_app/releases/20180115021101/public/system ]
+ DEBUG [f6c11b6e] Finished in 0.268 seconds with exit status 1 (failed).
+ DEBUG [eea3bef4] Running [ -d /root/apps/toy_app/releases/20180115021101/public/system ] as root@35.197.136.5
+ DEBUG [eea3bef4] Command: [ -d /root/apps/toy_app/releases/20180115021101/public/system ]
+ DEBUG [eea3bef4] Finished in 0.249 seconds with exit status 1 (failed).
+  INFO [003f3b2f] Running /usr/bin/env ln -s /root/apps/toy_app/shared/public/system /root/apps/toy_app/releases/20180115021101/public/system as root@35.197.136.5
+ DEBUG [003f3b2f] Command: /usr/bin/env ln -s /root/apps/toy_app/shared/public/system /root/apps/toy_app/releases/20180115021101/public/system
+  INFO [003f3b2f] Finished in 0.270 seconds with exit status 0 (successful).
+ DEBUG [e787e098] Running [ -L /root/apps/toy_app/releases/20180115021101/public/uploads ] as root@35.197.136.5
+ DEBUG [e787e098] Command: [ -L /root/apps/toy_app/releases/20180115021101/public/uploads ]
+ DEBUG [e787e098] Finished in 0.318 seconds with exit status 1 (failed).
+ DEBUG [ee09236f] Running [ -d /root/apps/toy_app/releases/20180115021101/public/uploads ] as root@35.197.136.5
+ DEBUG [ee09236f] Command: [ -d /root/apps/toy_app/releases/20180115021101/public/uploads ]
+ DEBUG [ee09236f] Finished in 0.281 seconds with exit status 1 (failed).
+  INFO [acbf21af] Running /usr/bin/env ln -s /root/apps/toy_app/shared/public/uploads /root/apps/toy_app/releases/20180115021101/public/uploads as root@35.197.136.5
+ DEBUG [acbf21af] Command: /usr/bin/env ln -s /root/apps/toy_app/shared/public/uploads /root/apps/toy_app/releases/20180115021101/public/uploads
+  INFO [acbf21af] Finished in 0.277 seconds with exit status 0 (successful).
+ DEBUG [7b859c4b] Running [ -L /root/apps/toy_app/releases/20180115021101/public/assets ] as root@35.197.136.5
+ DEBUG [7b859c4b] Command: [ -L /root/apps/toy_app/releases/20180115021101/public/assets ]
+ DEBUG [7b859c4b] Finished in 0.270 seconds with exit status 1 (failed).
+ DEBUG [93d9ec36] Running [ -d /root/apps/toy_app/releases/20180115021101/public/assets ] as root@35.197.136.5
+ DEBUG [93d9ec36] Command: [ -d /root/apps/toy_app/releases/20180115021101/public/assets ]
+ DEBUG [93d9ec36] Finished in 0.288 seconds with exit status 1 (failed).
+  INFO [ccb2e962] Running /usr/bin/env ln -s /root/apps/toy_app/shared/public/assets /root/apps/toy_app/releases/20180115021101/public/assets as root@35.197.136.5
+ DEBUG [ccb2e962] Command: /usr/bin/env ln -s /root/apps/toy_app/shared/public/assets /root/apps/toy_app/releases/20180115021101/public/assets
+  INFO [ccb2e962] Finished in 0.280 seconds with exit status 0 (successful).
+ DEBUG [0f9819af] Running if test ! -d /root/apps/toy_app/releases/20180115021101; then echo "Directory does not exist '/root/apps/toy_app/releases/20180115021101'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [0f9819af] Command: if test ! -d /root/apps/toy_app/releases/20180115021101; then echo "Directory does not exist '/root/apps/toy_app/releases/20180115021101'" 1>&2; false; fi
+ DEBUG [0f9819af] Finished in 0.308 seconds with exit status 0 (successful).
+ DEBUG [9754daea] Running /usr/local/rvm/bin/rvm 2.5.0 do bundle check --path /root/apps/toy_app/shared/bundle as root@35.197.136.5
+ DEBUG [9754daea] Command: cd /root/apps/toy_app/releases/20180115021101 && /usr/local/rvm/bin/rvm 2.5.0 do bundle check --path /root/apps/toy_app/shared/bundle
+ DEBUG [9754daea] 	[31mhttps://github.com/seuros/capistrano-puma.git (at master@81647bc) is not yet
+ DEBUG [9754daea] 	
+ DEBUG [9754daea] 	checked out. Run `bundle install` first.[0m
+ DEBUG [9754daea] 	
+ DEBUG [9754daea] Finished in 0.822 seconds with exit status 11 (failed).
+  INFO [866d3b8c] Running /usr/local/rvm/bin/rvm 2.5.0 do bundle install --path /root/apps/toy_app/shared/bundle --without development test --deployment --quiet as root@35.197.136.5
+ DEBUG [866d3b8c] Command: cd /root/apps/toy_app/releases/20180115021101 && /usr/local/rvm/bin/rvm 2.5.0 do bundle install --path /root/apps/toy_app/shared/bundle --without development test --deployment --quiet
+  INFO [866d3b8c] Finished in 82.923 seconds with exit status 0 (successful).
+ DEBUG [112f81fe] Running if test ! -d /root/apps/toy_app/releases/20180115021101; then echo "Directory does not exist '/root/apps/toy_app/releases/20180115021101'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [112f81fe] Command: if test ! -d /root/apps/toy_app/releases/20180115021101; then echo "Directory does not exist '/root/apps/toy_app/releases/20180115021101'" 1>&2; false; fi
+ DEBUG [112f81fe] Finished in 0.268 seconds with exit status 0 (successful).
+  INFO [e6d18cae] Running /usr/local/rvm/bin/rvm 2.5.0 do bundle exec rake assets:precompile as root@35.197.136.5
+ DEBUG [e6d18cae] Command: cd /root/apps/toy_app/releases/20180115021101 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; /usr/local/rvm/bin/rvm 2.5.0 do bundle exec rake assets:precompile )
+ DEBUG [e6d18cae] 	Yarn executable was not detected in the system.
+ DEBUG [e6d18cae] 	
+ DEBUG [e6d18cae] 	Download Yarn at https://yarnpkg.com/en/docs/install
+ DEBUG [e6d18cae] 	
+ DEBUG [e6d18cae] 	I, [2018-01-15T02:12:49.013542 #26562]  INFO -- : Writing /root/apps/toy_app/releases/20180115021101/public/assets/application-26a8755e392a8d28e32ceedbb83ef4d7c72c899883dfbf73e6a7a16ac2d44584.js
+ DEBUG [e6d18cae] 	
+ DEBUG [e6d18cae] 	I, [2018-01-15T02:12:49.015575 #26562]  INFO -- : Writing /root/apps/toy_app/releases/20180115021101/public/assets/application-26a8755e392a8d28e32ceedbb83ef4d7c72c899883dfbf73e6a7a16ac2d44584.js.gz
+ DEBUG [e6d18cae] 	
+ DEBUG [e6d18cae] 	I, [2018-01-15T02:12:49.023849 #26562]  INFO -- : Writing /root/apps/toy_app/releases/20180115021101/public/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css
+ DEBUG [e6d18cae] 	
+ DEBUG [e6d18cae] 	I, [2018-01-15T02:12:49.024352 #26562]  INFO -- : Writing /root/apps/toy_app/releases/20180115021101/public/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css.gz
+ DEBUG [e6d18cae] 	
+  INFO [e6d18cae] Finished in 3.778 seconds with exit status 0 (successful).
+ DEBUG [83d256b2] Running if test ! -d /root/apps/toy_app/releases/20180115021101; then echo "Directory does not exist '/root/apps/toy_app/releases/20180115021101'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [83d256b2] Command: if test ! -d /root/apps/toy_app/releases/20180115021101; then echo "Directory does not exist '/root/apps/toy_app/releases/20180115021101'" 1>&2; false; fi
+ DEBUG [83d256b2] Finished in 0.281 seconds with exit status 0 (successful).
+  INFO [e9f95e70] Running /usr/bin/env mkdir -p /root/apps/toy_app/releases/20180115021101/assets_manifest_backup as root@35.197.136.5
+ DEBUG [e9f95e70] Command: cd /root/apps/toy_app/releases/20180115021101 && /usr/bin/env mkdir -p /root/apps/toy_app/releases/20180115021101/assets_manifest_backup
+  INFO [e9f95e70] Finished in 0.278 seconds with exit status 0 (successful).
+ DEBUG [a7643c86] Running /usr/bin/env ls /root/apps/toy_app/releases/20180115021101/public/assets/.sprockets-manifest* as root@35.197.136.5
+ DEBUG [a7643c86] Command: cd /root/apps/toy_app/releases/20180115021101 && /usr/bin/env ls /root/apps/toy_app/releases/20180115021101/public/assets/.sprockets-manifest*
+ DEBUG [a7643c86] 	/root/apps/toy_app/releases/20180115021101/public/assets/.sprockets-manifest-06786ec396b579215688dceae13dde6a.json
+ DEBUG [a7643c86] 	
+ DEBUG [a7643c86] Finished in 0.279 seconds with exit status 0 (successful).
+ DEBUG [da6e0f76] Running /usr/bin/env ls /root/apps/toy_app/releases/20180115021101/public/assets/.sprockets-manifest* as root@35.197.136.5
+ DEBUG [da6e0f76] Command: cd /root/apps/toy_app/releases/20180115021101 && /usr/bin/env ls /root/apps/toy_app/releases/20180115021101/public/assets/.sprockets-manifest*
+ DEBUG [da6e0f76] 	/root/apps/toy_app/releases/20180115021101/public/assets/.sprockets-manifest-06786ec396b579215688dceae13dde6a.json
+ DEBUG [da6e0f76] 	
+ DEBUG [da6e0f76] Finished in 0.290 seconds with exit status 0 (successful).
+  INFO [076af61c] Running /usr/bin/env cp /root/apps/toy_app/releases/20180115021101/public/assets/.sprockets-manifest-06786ec396b579215688dceae13dde6a.json /root/apps/toy_app/releases/20180115021101/assets_manifest_backup as root@35.197.136.5
+ DEBUG [076af61c] Command: cd /root/apps/toy_app/releases/20180115021101 && /usr/bin/env cp /root/apps/toy_app/releases/20180115021101/public/assets/.sprockets-manifest-06786ec396b579215688dceae13dde6a.json /root/apps/toy_app/releases/20180115021101/assets_manifest_backup
+  INFO [076af61c] Finished in 0.299 seconds with exit status 0 (successful).
+  INFO [deploy:db:create] Run `rake db:create`
+ DEBUG [ca978614] Running if test ! -d /root/apps/toy_app/releases/20180115021101; then echo "Directory does not exist '/root/apps/toy_app/releases/20180115021101'" 1>&2; false; fi as root@35.197.136.5
+ DEBUG [ca978614] Command: if test ! -d /root/apps/toy_app/releases/20180115021101; then echo "Directory does not exist '/root/apps/toy_app/releases/20180115021101'" 1>&2; false; fi
+ DEBUG [ca978614] Finished in 0.275 seconds with exit status 0 (successful).
+  INFO [18c4f90b] Running /usr/local/rvm/bin/rvm 2.5.0 do bundle exec rake db:create as root@35.197.136.5
+ DEBUG [18c4f90b] Command: cd /root/apps/toy_app/releases/20180115021101 && ( export RAILS_ENV="production" ; /usr/local/rvm/bin/rvm 2.5.0 do bundle exec rake db:create )
+ DEBUG [18c4f90b] 	PG::InsufficientPrivilege: ERROR:  permission denied to create database
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	: CREATE DATABASE "toy_app" ENCODING = 'unicode'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	Couldn't create database for {"database"=>"toy_app", "adapter"=>"postgresql", "username"=>"root", "password"=>"toor", "host"=>"localhost", "encoding"=>"unicode", "port"=>5432, "pool"=>5}
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	rake aborted!
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	ActiveRecord::StatementInvalid: PG::InsufficientPrivilege: ERROR:  permission denied to create database
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	: CREATE DATABASE "toy_app" ENCODING = 'unicode'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `async_exec'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `block (2 levels) in execute'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:46:in `block in permit_concurrent_loads'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/concurrency/share_lock.rb:185:in `yield_shares'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:45:in `permit_concurrent_loads'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:72:in `block in execute'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:612:in `block (2 levels) in log'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:611:in `block in log'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:603:in `log'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:71:in `execute'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/schema_statements.rb:46:in `create_database'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/postgresql_database_tasks.rb:19:in `create'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/ac
+ DEBUG [18c4f90b] 	tive_record/tasks/database_tasks.rb:117:in `create'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:137:in `block in create_current'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:304:in `block in each_current_configuration'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:303:in `each'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:303:in `each_current_configuration'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:136:in `create_current'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/railties/databases.rake:27:in `block (2 levels) in <top (required)>'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli/exec.rb:75:in `load'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli/exec.rb:75:in `kernel_load'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli.rb:424:in `exec'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli.rb:18:in `start'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/exe/bundle:30:in `block in 
+ DEBUG [18c4f90b] 	<top (required)>'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/friendly_errors.rb:122:in `with_friendly_errors'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/exe/bundle:22:in `<top (required)>'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/bin/bundle:23:in `load'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/bin/bundle:23:in `<main>'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/bin/ruby_executable_hooks:15:in `eval'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	Caused by:
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	PG::InsufficientPrivilege: ERROR:  permission denied to create database
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `async_exec'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:73:in `block (2 levels) in execute'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:46:in `block in permit_concurrent_loads'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/concurrency/share_lock.rb:185:in `yield_shares'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/dependencies/interlock.rb:45:in `permit_concurrent_loads'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:72:in `block in execute'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:612:in `block (2 levels) in log'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:611:in `block in log'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activesupport-5.1.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/abstract_adapter.rb:603:in `log'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:71:in `execute'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/connection_adapters/postgresql/schema_statements.rb:46:in `create_database'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/postgresql_database_tasks.rb:19:in `create'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/ac
+ DEBUG [18c4f90b] 	tive_record/tasks/database_tasks.rb:117:in `create'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:137:in `block in create_current'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:304:in `block in each_current_configuration'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:303:in `each'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:303:in `each_current_configuration'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/tasks/database_tasks.rb:136:in `create_current'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/activerecord-5.1.4/lib/active_record/railties/databases.rake:27:in `block (2 levels) in <top (required)>'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/root/apps/toy_app/shared/bundle/ruby/2.5.0/gems/rake-12.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli/exec.rb:75:in `load'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli/exec.rb:75:in `kernel_load'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli/exec.rb:28:in `run'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli.rb:424:in `exec'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli.rb:27:in `dispatch'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/cli.rb:18:in `start'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/exe/bundle:30:in `block in 
+ DEBUG [18c4f90b] 	<top (required)>'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/lib/bundler/friendly_errors.rb:122:in `with_friendly_errors'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/gems/bundler-1.16.1/exe/bundle:22:in `<top (required)>'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/bin/bundle:23:in `load'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/bin/bundle:23:in `<main>'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/bin/ruby_executable_hooks:15:in `eval'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	/usr/local/rvm/gems/ruby-2.5.0/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	Tasks: TOP => db:create
+ DEBUG [18c4f90b] 	
+ DEBUG [18c4f90b] 	(See full trace by running task with --trace)
+ DEBUG [18c4f90b] 	
