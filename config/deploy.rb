@@ -21,6 +21,19 @@ set :rvm_ruby_version, '2.5.0'
 # set :format_options, log_file: "storage/logs/capistrano.log"
 set :linked_dirs, %w{tmp/pids tmp/sockets log}
 
+set :puma_state, "#{shared_path}/tmp/pids/puma.state"
+set :puma_pid, "#{shared_path}/tmp/pids/puma.pid"
+set :puma_bind, "unix://#{shared_path}/tmp/sockets/puma.sock"
+set :puma_conf, "#{shared_path}/puma.rb"
+set :puma_access_log, "#{shared_path}/log/puma_error.log"
+set :puma_error_log, "#{shared_path}/log/puma_access.log"
+set :puma_role, :app
+set :puma_env, fetch(:rack_env, fetch(:rails_env, 'production'))
+set :puma_threads, [0, 16]
+set :puma_workers, 0
+set :puma_init_active_record, false
+
+
 namespace :logs do
   desc "tail rails logs" 
   task :tail_rails do
