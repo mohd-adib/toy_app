@@ -10,7 +10,8 @@ server '35.186.159.184', user: "deployer", roles: %w{app db web}, primary: true
 set :deploy_to,       "/home/deployer/apps/#{fetch(:application)}"
 set :pty, true
 
-set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml', 'config/puma.rb')
+set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
+# set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml', 'config/puma.rb')
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
 set :config_example_suffix, '.example'
