@@ -22,6 +22,9 @@ set :rvm_ruby_version, '2.5.0'
 # set :format_options, log_file: "storage/logs/capistrano.log"
 set :linked_dirs, %w{tmp/pids tmp/sockets log}
 
+set :puma_jungle_conf, '/etc/puma.conf'
+set :puma_run_path, '/usr/local/bin/run-puma'
+
 set :puma_state, "#{shared_path}/tmp/pids/puma.state"
 set :puma_pid, "#{shared_path}/tmp/pids/puma.pid"
 set :puma_bind, "unix://#{shared_path}/tmp/sockets/puma.sock"
