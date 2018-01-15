@@ -7,7 +7,7 @@ set :rails_env, 'production'
 # server '35.197.136.5', user: "root", roles: %w{app db web}, primary: true
 server '35.186.159.184', user: "root", roles: %w{app db web}, primary: true
 
-set :deploy_to,       "/root/apps/#{fetch(:application)}"
+set :deploy_to,       "/home/deployer/apps/#{fetch(:application)}"
 set :pty, true
 
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml', 'config/puma.rb')
