@@ -1,0 +1,110 @@
+<div class="wrapper">
+  <div id="quiz">
+    <h1>Bahasa Arab</h1>
+    <p class="questions"></p>
+    <div class="answers"></div>         
+    <div class="checkAnswers">
+      <h3>Correct?</h3>
+      <div class="checker"></div>
+    </div>
+  </div>
+</div>
+<script>
+window.onload = function () {
+  
+  var questionArea = document.getElementsByClassName('questions')[0],
+      answerArea   = document.getElementsByClassName('answers')[0],
+      checker      = document.getElementsByClassName('checker')[0],
+      current      = 0,
+  
+     // An object that holds all the questions + possible answers.
+     // In the array --> last digit gives the right answer position
+      allQuestions ={"\u0639\u064e\u064a\u0652\u0646\u064c": ["tulang kering", "mata", "kuku", "rusuk", 1], "\u0645\u0650\u0631\u0652\u0641\u064e\u0642\u064c": ["sanggul", "siku", "buku lali", "bahu", 1], "\u0641\u064e\u062e\u0650\u0630\u064c": ["tumit", "tulang kering", "kuku", "peha", 3], "\u0639\u064f\u0646\u064f\u0642\u064c\u060c \u0631\u064e\u0642\u064e\u0628\u064e\u0629\u064c": ["kuku", "rusuk", "leher", "tocang", 2], "\u0639\u064e\u0645\u0651\u064e\u0627\u0632\u064e\u0629\u064c": ["rusuk", "tocang", "dada", "lesung pipi, lesung pipit", 3], "\u0648\u064e\u0631\u0650\u0643\u064c": ["lubang hidung", "punggung", "siku", "tengkuk", 1], "\u0645\u064f\u0624\u064e\u062e\u0651\u0650\u0631\u064f \u0627\u0644\u0639\u064f\u0646\u064f\u0642\u0650\u060c \u0642\u064e\u0641\u064e\u0627 \u0627\u0644\u0631\u0651\u064e\u0642\u064e\u0628\u064e\u0629\u0650": ["buku lali", "tengkuk", "bahu", "jambang", 1], "\u0644\u0650\u0633\u064e\u0627\u0646\u064c": ["lidah", "bahu", "jambang", "kaki", 0], "\u0634\u064e\u064a\u0652\u0628\u064c": ["tangan", "uban", "jari hantu", "punggung", 1], "\u0634\u064e\u0645\u0652\u062d\u064e\u0629\u064f \u0627\u0644\u0623\u064f\u0630\u064f\u0646\u0650": ["cuping telinga", "jari hantu", "punggung", "bulu mata", 0], "\u0642\u064e\u0637\u064e\u0627\u0626\u0650\u0641\u064f \u0627\u0644\u0634\u0651\u064e\u0639\u0652\u0631\u0650": ["jambang", "mata", "leher", "lesung pipi, lesung pipit", 0], "\u064a\u064e\u062f\u064c": ["tulang belikat", "jambul, ubun", "tangan", "lubang hidung", 2], "\u0642\u064e\u062f\u064e\u0645\u064c": ["kaki", "leher", "lesung pipi, lesung pipit", "tumit", 0], "\u0643\u064e\u0639\u0652\u0643\u064e\u0629\u064f \u0634\u064e\u0639\u0652\u0631\u064d": ["kaki", "mulut", "sanggul", "peha", 2], "\u0634\u064e\u0641\u064e\u0629\u064c": ["bibir", "punggung", "bulu mata", "tulang belikat", 0], "\u0641\u064e\u0645\u064c\u060c \u0641\u064f\u0648\u0647\u064c": ["mulut", "lesung pipi, lesung pipit", "tumit", "tulang kering", 0], "\u0648\u064f\u0633\u0652\u0637\u064e\u0649": ["jambul, ubun", "lubang hidung", "siku", "jari hantu", 3], "\u0639\u064e\u0638\u0652\u0645\u064f \u0627\u0644\u0633\u0651\u064e\u0627\u0642\u0650": ["dada", "uban", "cuping telinga", "tulang kering", 3], "\u0644\u0650\u062d\u0652\u064a\u064e\u0629\u064c": ["janggut", "jambang", "kaki", "mulut", 0], "\u0646\u064e\u0627\u0635\u0650\u064a\u064e\u0629\u064c": ["lidah", "janggut", "jambul, ubun", "sanggul", 2], "\u0647\u064f\u062f\u0652\u0628\u064f \u0627\u0644\u0639\u064e\u064a\u0652\u0646\u0650": ["siku", "tengkuk", "lidah", "bulu mata", 3], "\u0634\u064e\u0639\u0652\u0631\u064c": ["bulu mata", "rambut", "tulang belikat", "jambul, ubun", 1], "\u0635\u064e\u062f\u0652\u0631\u064c": ["rambut", "tangan", "dada", "jari hantu", 2], "\u0643\u064e\u0639\u0652\u0628\u064c": ["mulut", "peha", "buku lali", "mata", 2], "\u0643\u064e\u062a\u0650\u0641\u064c\u060c \u0645\u064e\u0646\u0652\u0643\u0650\u0628\u064c": ["peha", "mata", "leher", "bahu", 3], "\u0646\u064f\u063a\u0652\u0636\u064f \u0627\u0644\u0643\u064e\u062a\u0650\u0641\u0650": ["tulang belikat", "tengkuk", "lidah", "janggut", 0], "\u0636\u0650\u0644\u0652\u0639\u064c": ["cuping telinga", "rusuk", "bibir", "rambut", 1], "\u0636\u064e\u0641\u0650\u064a\u0631\u064e\u0629\u064c": ["bibir", "rambut", "tangan", "tocang", 3], "\u0645\u064e\u0646\u0652\u062e\u0650\u0631\u064f \u0627\u0644\u0623\u064e\u0646\u0652\u0641\u0650": ["lubang hidung", "janggut", "sanggul", "buku lali", 0], "\u0639\u064e\u0642\u0650\u0628\u064f \u0627\u0644\u0642\u064e\u062f\u064e\u0645\u0650": ["tocang", "tumit", "dada", "uban", 1], "\u0638\u064f\u0641\u0652\u0631\u064c": ["uban", "cuping telinga", "kuku", "bibir", 2]};
+   
+
+  function loadQuestion(curr) {
+  // This function loads all the question into the questionArea
+  // It grabs the current question based on the 'current'-variable
+  
+    var question = Object.keys(allQuestions)[curr];
+    
+    questionArea.innerHTML = '';
+    questionArea.innerHTML = question;    
+  }
+  
+  function loadAnswers(curr) {
+  // This function loads all the possible answers of the given question
+  // It grabs the needed answer-array with the help of the current-variable
+  // Every answer is added with an 'onclick'-function
+  
+    var answers = allQuestions[Object.keys(allQuestions)[curr]];
+    
+    answerArea.innerHTML = '';
+    
+    for (var i = 0; i < answers.length -1; i += 1) {
+      var createDiv = document.createElement('div'),
+          text = document.createTextNode(answers[i]);
+      
+      createDiv.appendChild(text);      
+      createDiv.addEventListener("click", checkAnswer(i, answers));
+      
+      
+      answerArea.appendChild(createDiv);
+    }
+  }
+  
+  function checkAnswer(i, arr) {
+    // This is the function that will run, when clicked on one of the answers
+    // Check if givenAnswer is sams as the correct one
+    // After this, check if it's the last question:
+    // If it is: empty the answerArea and let them know it's done.
+    
+    return function () {
+      var givenAnswer = i,
+          correctAnswer = arr[arr.length-1];
+      
+      if (givenAnswer === correctAnswer) {
+        addChecker(true);             
+      } else {
+        addChecker(false);                        
+      }
+      
+      if (current < Object.keys(allQuestions).length -1) {
+        current += 1;
+        
+        loadQuestion(current);
+        loadAnswers(current);
+      } else {
+        questionArea.innerHTML = 'Done';
+        answerArea.innerHTML = '';
+      }
+                              
+    };
+  }
+  
+  function addChecker(bool) {
+  // This function adds a div element to the page
+  // Used to see if it was correct or false
+  
+    var createDiv = document.createElement('div'),
+        txt       = document.createTextNode(current + 1);
+    
+    createDiv.appendChild(txt);
+    
+    if (bool) {
+      
+      createDiv.className += 'correct';
+      checker.appendChild(createDiv);
+    } else {
+      createDiv.className += 'false';
+      checker.appendChild(createDiv);
+    }
+  }
+  
+  
+  // Start the quiz right away
+  loadQuestion(current);
+  loadAnswers(current);
+  
+};
+</script>

@@ -1,0 +1,19 @@
+<div id="quiz">
+  <div class="questions"></div>
+  <div class="answers"></div>
+  <div class="checkAnswers">
+    <h3>Betul?</h3>
+    <div class="checker"></div>
+  </div>
+</div>
+<script>
+var myFunc = function() {
+
+    var questionArea = document.getElementsByClassName('questions')[0],
+        answerArea = document.getElementsByClassName('answers')[0],
+        checker = document.getElementsByClassName('checker')[0],
+        current = 0,
+
+        // An object that holds all the questions + possible answers.
+        // In the array --> last digit gives the right answer position
+        allQuestions =

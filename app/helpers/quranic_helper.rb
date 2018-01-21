@@ -1,0 +1,2 @@
+module QuranicHelper
+end

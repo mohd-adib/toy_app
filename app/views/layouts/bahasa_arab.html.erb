@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset=UTF-8>
+    <title><%= full_title(yield(:title)) %></title>    
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/shim' %>
+    <link href="https://fonts.googleapis.com/css?family=Amiri|Lato" rel="stylesheet">
+  </head>
+
+  <body>
+    <%= render 'layouts/header' %>
+    <div class="container">
+    	
+<div class="row">
+  <div class="col-6 col-md-4">
+  <h1>Bahasa Arab</h1>
+  <%= render 'layouts/top_quiz' %>
+  <%= yield %>
+  <%= render 'layouts/last_quiz' %>
+  </div>
+  <div class="col-6 col-md-4"><%= render 'layouts/bahasa_arab_right' %></div>
+  <div class="col-6 col-md-4"></div>
+</div>
+      
+
+      
+      <%= render 'layouts/footer' %>
+    </div>
+  </body>
+</html>
