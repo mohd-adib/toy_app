@@ -1,4 +1,108 @@
 Rails.application.routes.draw do
+  get 'jawi/anggotabadan'
+
+  get 'jawi/anggotabadan2'
+
+  get 'jawi/anggotakeluarga'
+
+  get 'jawi/anggotakeluarga2'
+
+  get 'jawi/arah'
+
+  get 'jawi/bentuk'
+
+  get 'jawi/binatangliar'
+
+  get 'jawi/binatangperliharaan'
+
+  get 'jawi/buahbuahan'
+
+  get 'jawi/buahbuahan2'
+
+  get 'jawi/bulanislam'
+
+  get 'jawi/bulanislamv2'
+
+  get 'jawi/bulanmasihi'
+
+  get 'jawi/bulanmasihiv2'
+
+  get 'jawi/bunga'
+
+  get 'jawi/burung'
+
+  get 'jawi/fenomenaalam'
+
+  get 'jawi/hari'
+
+  get 'jawi/hari2'
+
+  get 'jawi/hobi'
+
+  get 'jawi/index'
+
+  get 'jawi/kenderaan'
+
+  get 'jawi/makanan'
+
+  get 'jawi/makanan2'
+
+  get 'jawi/masa'
+
+  get 'jawi/musim'
+
+  get 'jawi/negeridimalaysia'
+
+  get 'jawi/nombor1'
+
+  get 'jawi/nombor2'
+
+  get 'jawi/nombor3'
+
+  get 'jawi/nombor4'
+
+  get 'jawi/nombor5'
+
+  get 'jawi/organdalaman'
+
+  get 'jawi/pakaian'
+
+  get 'jawi/partikel'
+
+  get 'jawi/partikel2'
+
+  get 'jawi/partikel3'
+
+  get 'jawi/partikel4'
+
+  get 'jawi/partikel5'
+
+  get 'jawi/partikel6'
+
+  get 'jawi/pekerjaan'
+
+  get 'jawi/pekerjaan2'
+
+  get 'jawi/penyakit'
+
+  get 'jawi/peralatan'
+
+  get 'jawi/peralatan2'
+
+  get 'jawi/peralatan3'
+
+  get 'jawi/peralatan4'
+
+  get 'jawi/sayursayuran'
+
+  get 'jawi/sayursayuran2'
+
+  get 'jawi/seranggahaiwankecil'
+
+  get 'jawi/seranggahaiwankecil2'
+
+  get 'jawi/warna'
+
   get 'quranic/q01'
 
   get 'quranic/q02'
