@@ -1,4 +1,108 @@
 Rails.application.routes.draw do
+  get 'inggeris/anggotabadan'
+
+  get 'inggeris/anggotabadan2'
+
+  get 'inggeris/anggotakeluarga'
+
+  get 'inggeris/anggotakeluarga2'
+
+  get 'inggeris/arah'
+
+  get 'inggeris/bentuk'
+
+  get 'inggeris/binatangliar'
+
+  get 'inggeris/binatangperliharaan'
+
+  get 'inggeris/buahbuahan'
+
+  get 'inggeris/buahbuahan2'
+
+  get 'inggeris/bulanislam'
+
+  get 'inggeris/bulanislamv2'
+
+  get 'inggeris/bulanmasihi'
+
+  get 'inggeris/bulanmasihiv2'
+
+  get 'inggeris/bunga'
+
+  get 'inggeris/burung'
+
+  get 'inggeris/fenomenaalam'
+
+  get 'inggeris/hari'
+
+  get 'inggeris/hari2'
+
+  get 'inggeris/hobi'
+
+  get 'inggeris/index'
+
+  get 'inggeris/kenderaan'
+
+  get 'inggeris/makanan'
+
+  get 'inggeris/makanan2'
+
+  get 'inggeris/masa'
+
+  get 'inggeris/musim'
+
+  get 'inggeris/negeridimalaysia'
+
+  get 'inggeris/nombor1'
+
+  get 'inggeris/nombor2'
+
+  get 'inggeris/nombor3'
+
+  get 'inggeris/nombor4'
+
+  get 'inggeris/nombor5'
+
+  get 'inggeris/organdalaman'
+
+  get 'inggeris/pakaian'
+
+  get 'inggeris/partikel'
+
+  get 'inggeris/partikel2'
+
+  get 'inggeris/partikel3'
+
+  get 'inggeris/partikel4'
+
+  get 'inggeris/partikel5'
+
+  get 'inggeris/partikel6'
+
+  get 'inggeris/pekerjaan'
+
+  get 'inggeris/pekerjaan2'
+
+  get 'inggeris/penyakit'
+
+  get 'inggeris/peralatan'
+
+  get 'inggeris/peralatan2'
+
+  get 'inggeris/peralatan3'
+
+  get 'inggeris/peralatan4'
+
+  get 'inggeris/sayursayuran'
+
+  get 'inggeris/sayursayuran2'
+
+  get 'inggeris/seranggahaiwankecil'
+
+  get 'inggeris/seranggahaiwankecil2'
+
+  get 'inggeris/warna'
+
   get 'jawi/anggotabadan'
 
   get 'jawi/anggotabadan2'
