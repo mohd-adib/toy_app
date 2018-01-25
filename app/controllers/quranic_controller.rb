@@ -1,4 +1,5 @@
 class QuranicController < ApplicationController
+  layout "quranic"
   def q01
   end
 

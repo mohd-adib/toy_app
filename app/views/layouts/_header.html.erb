@@ -8,13 +8,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to "falah.org", root_path, class: "navbar-brand" %>
+          <%= link_to "falah.org", root_url, class: "navbar-brand" %>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Bahasa <span class="caret"></span></a>
               <ul class="dropdown-menu">
+                <li><%= link_to "Quran", quran_q01_path %></li>
                 <li><%= link_to "Quranic", quranic_q01_path %></li>
                 <li role="separator" class="divider"></li>
                 <li class="dropdown-header"></li>

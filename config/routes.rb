@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'quran/q01'
+
+  get 'quran/q02'
+
   get 'inggeris/anggotabadan'
 
   get 'inggeris/anggotabadan2'
