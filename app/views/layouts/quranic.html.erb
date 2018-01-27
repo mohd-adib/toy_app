@@ -8,23 +8,31 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= render 'layouts/shim' %>
     <link href="https://fonts.googleapis.com/css?family=Amiri|Lato" rel="stylesheet">
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+//<![CDATA[
+  (adsbygoogle = window.adsbygoogle || []).push({
+    data-ad-client="ca-pub-8655533333929810",
+    enable_page_level_ads: true
+  });
+//]]>
+</script>
   </head>
 
 <body>
   <%= render 'layouts/header' %>
   <div class="container">
-    	
-		<div class="row">
-		  <div class="col-6 col-md-4">
-		  <h1>Quranic Words</h1>
-		  <%= render 'layouts/top_quiz' %>
-		  <%= yield %>
-		  <%= render 'layouts/last_quiz' %>
-		  </div>
-		  <div class="col-6 col-md-4"><%= render 'layouts/quranic_right' %></div>
+      
+    <div class="row">
+      <div class="col-6 col-md-4">
+      <h1>Quranic Words</h1>
+      <%= render 'layouts/top_quiz' %>
+      <%= yield %>
+      <%= render 'layouts/last_quiz' %>
+      </div>
+      <div class="col-6 col-md-4"><%= render 'layouts/quranic_right' %></div>
   <div class="col-6 col-md-4">
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- falah.org -->
 <ins class="adsbygoogle"
      style="display:inline-block;width:300px;height:600px"
@@ -33,6 +41,7 @@
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+
 
   </div>
 		</div>
