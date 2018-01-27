@@ -10,24 +10,20 @@
     <link href="https://fonts.googleapis.com/css?family=Amiri|Lato" rel="stylesheet">
   </head>
 
-  <body>
-    <%= render 'layouts/header' %>
-    <div class="container">
-    	
-<div class="row">
-  <div class="col-6 col-md-4">
-  <h1>Jawi</h1>
-  <%= render 'layouts/top_quiz' %>
-  <%= yield %>
-  <%= render 'layouts/last_quiz' %>
-  </div>
-  <div class="col-6 col-md-4"><%= render 'layouts/jawi_right' %></div>
-  <div class="col-6 col-md-4"><%= link_to image_tag("banner.png", alt: "falah.org"), 'http://bit.ly/kedaibukuon9', target: '_blank'  %></div>
-</div>
-      
-
-      
-      <%= render 'layouts/footer' %>
+<body>
+<%= render 'layouts/header' %>
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-4">
+      <h1>Jawi</h1>
+      <%= render 'layouts/top_quiz' %>
+      <%= yield %>
+      <%= render 'layouts/last_quiz' %>
+      </div>
+      <div class="col-6 col-md-4"><%= render 'layouts/jawi_right' %></div>
+      <div class="col-6 col-md-4"><%= render 'layouts/right' %></div>
     </div>
-  </body>
+    <%= render 'layouts/footer' %>
+  </div>
+</body>
 </html>

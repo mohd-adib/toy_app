@@ -10,36 +10,20 @@
     <link href="https://fonts.googleapis.com/css?family=Amiri|Lato" rel="stylesheet">
   </head>
 
-  <body>
-    <%= render 'layouts/header' %>
-    <div class="container">
-    	
-<div class="row">
-  <div class="col-6 col-md-4">
-  <h1>Bahasa Arab</h1>
-  <%= render 'layouts/top_quiz' %>
-  <%= yield %>
-  <%= render 'layouts/last_quiz' %>
-  </div>
-  <div class="col-6 col-md-4"><%= render 'layouts/bahasa_arab_right' %></div>
-  <div class="col-6 col-md-4">
-    
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- falah.org -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:300px;height:600px"
-     data-ad-client="ca-pub-8655533333929810"
-     data-ad-slot="7038819751"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-  </div>
-</div>
-      
-
-      
-      <%= render 'layouts/footer' %>
+<body>
+  <%= render 'layouts/header' %>
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-4">
+      <h1>Bahasa Arab</h1>
+      <%= render 'layouts/top_quiz' %>
+      <%= yield %>
+      <%= render 'layouts/last_quiz' %>
+      </div>
+      <div class="col-6 col-md-4"><%= render 'layouts/bahasa_arab_right' %></div>
+      <div class="col-6 col-md-4"><%= render 'layouts/right' %></div>
     </div>
-  </body>
+    <%= render 'layouts/footer' %>
+  </div>
+</body>
 </html>
